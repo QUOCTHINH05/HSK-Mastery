@@ -1,0 +1,70 @@
+body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.cn-font {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 35%, #14b8a6 70%, #2dd4bf 100%);
+}
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -12px rgba(15, 118, 110, 0.25);
+}
+
+.quiz-option {
+    transition: transform 0.12s ease, border-color 0.15s, background 0.15s;
+}
+
+.quiz-option:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.progress-shine {
+    background: linear-gradient(90deg, #0d9488, #14b8a6, #5eead4);
+    background-size: 200% 100%;
+    animation: shine 3s ease infinite;
+}
+
+@keyframes shine {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}

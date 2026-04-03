@@ -80,9 +80,9 @@ createApp({
         onMounted(async () => {
             try {
                 const files = [
-                    { name: 'Từ vựng HSK1-4 - HSK1+2.csv', split: 'hsk12', level: 1 },
-                    { name: 'Từ vựng HSK1-4 - HSK3.csv', level: 3 },
-                    { name: 'Từ vựng HSK1-4 - HSK4.csv', level: 4 },
+                    { name: 'data/Từ vựng HSK1-4 - HSK1+2.csv', split: 'hsk12', level: 1 },
+                    { name: 'data/Từ vựng HSK1-4 - HSK3.csv', level: 3 },
+                    { name: 'data/Từ vựng HSK1-4 - HSK4.csv', level: 4 },
                 ];
                 const all = [];
                 for (const f of files) {

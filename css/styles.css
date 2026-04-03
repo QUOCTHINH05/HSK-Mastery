@@ -1,5 +1,9 @@
-body {
-    font-family: 'DM Sans', system-ui, sans-serif;
+﻿body {
+    font-family: 'Lexend', sans-serif;
+    background:
+        radial-gradient(1200px 600px at -10% -20%, rgba(147, 197, 253, 0.28), transparent 60%),
+        radial-gradient(1000px 480px at 110% 10%, rgba(191, 219, 254, 0.35), transparent 55%),
+        #f8fbff;
 }
 
 .cn-font {
@@ -7,26 +11,31 @@ body {
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 35px -18px rgba(30, 64, 175, 0.28);
 }
 
 .hero-gradient {
-    background: linear-gradient(135deg, #0f766e 0%, #0d9488 35%, #14b8a6 70%, #2dd4bf 100%);
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 35%, #3b82f6 70%, #60a5fa 100%);
 }
 
 .card-hover {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
 }
 
 .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 40px -12px rgba(15, 118, 110, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 22px 40px -18px rgba(37, 99, 235, 0.4);
 }
 
 .quiz-option {
-    transition: transform 0.12s ease, border-color 0.15s, background 0.15s;
+    transition: transform 0.14s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz-option:hover:not(:disabled) {
+    box-shadow: 0 10px 22px -16px rgba(37, 99, 235, 0.55);
 }
 
 .quiz-option:active:not(:disabled) {
@@ -34,9 +43,9 @@ body {
 }
 
 .progress-shine {
-    background: linear-gradient(90deg, #0d9488, #14b8a6, #5eead4);
-    background-size: 200% 100%;
-    animation: shine 3s ease infinite;
+    background: linear-gradient(90deg, #2563eb, #3b82f6, #93c5fd);
+    background-size: 220% 100%;
+    animation: shine 3.2s ease infinite;
 }
 
 @keyframes shine {
@@ -50,13 +59,13 @@ body {
 }
 
 .fade-in {
-    animation: fadeIn 0.35s ease;
+    animation: fadeIn 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(6px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -64,7 +73,27 @@ body {
     }
 }
 
+#toast {
+    border: 1px solid rgba(147, 197, 253, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 #toast.show {
     opacity: 1;
     transform: translate(-50%, 0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #60a5fa, #3b82f6);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eaf2ff;
 }

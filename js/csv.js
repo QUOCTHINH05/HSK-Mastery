@@ -15,6 +15,7 @@ export function parseRows(data, fileKind) {
     for (const row of data) {
         const han = norm(row['HÁN TỰ'] || row['Hán tự']);
         const py = norm(row['PINYIN'] || row['Pinyin']);
+        const partOfSpeech = norm(row['TỪ LOẠI'] || row['Từ loại'] || row['PART OF SPEECH']);
         const vi = norm(row['NGHĨA'] || row['NGHĨA TIẾNG VIỆT'] || row['Nghĩa (tiếng việt)']);
         const en = norm(row['ENGLISH'] || row['NGHĨA TIẾNG ANH'] || row['English']);
         const stt = parseInt(row['STT'], 10);
@@ -28,7 +29,7 @@ export function parseRows(data, fileKind) {
         const dedupeKey = `${level}|${han}`;
         if (seen.has(dedupeKey)) continue;
         seen.add(dedupeKey);
-        out.push({ word: han, pinyin: py, meaning: vi || en, english: en || vi, level, stt });
+        out.push({ word: han, pinyin: py, partOfSpeech, meaning: vi || en, english: en || vi, level, stt });
     }
     return out;
 }

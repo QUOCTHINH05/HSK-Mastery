@@ -53,6 +53,7 @@ createApp({
 
         const readerText = ref('');
         const readerSpeaking = ref(false);
+        const isDarkMode = ref(document.documentElement.classList.contains('dark'));
 
         const currentQuestion = computed(() => quizQueue.value[quizIndex.value] || {});
         const modeLabel = computed(() => quizModes.find((x) => x.id === quizMode.value)?.label || '');
@@ -105,6 +106,10 @@ createApp({
             toast.textContent = msg;
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2600);
+        };
+
+        const toggleTheme = () => {
+            isDarkMode.value = !isDarkMode.value;
         };
 
         const showView = (view) => {
@@ -264,6 +269,10 @@ createApp({
 
         watch(collections, (v) => localStorage.setItem(NB_KEY, JSON.stringify(v)), { deep: true });
         watch(selectedVoiceId, (v) => localStorage.setItem(VOICE_KEY, v));
+        watch(isDarkMode, (v) => {
+            document.documentElement.classList.toggle('dark', v);
+            localStorage.setItem('hsk_mastery_theme_v1', v ? 'dark' : 'light');
+        });
         watch(dictLevel, () => {
             if (dictPage.value > dictPageCount.value) dictPage.value = 1;
         });
@@ -293,6 +302,7 @@ createApp({
             wasLastCorrect,
             readerText,
             readerSpeaking,
+            isDarkMode,
             dictLevel,
             dictPage,
             dictPageCount,
@@ -318,6 +328,7 @@ createApp({
             previewVoice,
             speakReader,
             stopReader,
+            toggleTheme,
             notebookKey,
             HSK_LEVELS,
         };

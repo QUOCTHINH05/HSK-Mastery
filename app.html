@@ -178,15 +178,29 @@
                         <div class="text-[10px] font-bold uppercase tracking-widest text-blue-600">HSK {{ currentLevel }} · {{ modeLabel }}</div>
                         <div class="text-sm text-slate-500 truncate">Phiên {{ quizQueue.length }} từ · Câu {{ quizIndex + 1 }} / {{ quizQueue.length }}</div>
                     </div>
-                    <div class="w-16 shrink-0"></div>
+                    <!-- Nút bật/tắt hiển thị Pinyin -->
+                    <button type="button" @click="toggleShowPinyin" class="text-slate-500 hover:text-slate-800 text-sm font-medium flex items-center gap-1" title="Hiển thị/ẩn Pinyin">
+                        <i :class="showPinyin ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"></i>
+                        <span class="hidden sm:inline ml-1">Pinyin</span>
+                    </button>
                 </div>
                 <div class="h-1.5 bg-slate-100"><div class="progress-shine h-full rounded-r transition-all duration-500 ease-out" :style="{ width: ((quizIndex + 1) / Math.max(quizQueue.length, 1)) * 100 + '%' }"></div></div>
                 <div class="p-6 md:p-10">
                     <div class="text-center mb-10">
                         <button type="button" @click="speak(currentQuestion.word)" class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors shadow-inner" title="Nghe phát âm"><i class="fa-solid fa-volume-high text-xl"></i></button>
-                        <template v-if="quizMode === 'cn-vi' || quizMode === 'cn-en'"><p class="cn-font text-5xl md:text-6xl font-bold text-slate-900 mb-3 leading-tight">{{ currentQuestion.word }}</p><p class="text-lg text-blue-700/90 font-medium">[{{ currentQuestion.pinyin }}]</p></template>
-                        <template v-else-if="quizMode === 'vi-cn'"><p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.meaning }}</p><p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p></template>
-                        <template v-else><p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.english }}</p><p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p></template>
+                        <template v-if="quizMode === 'cn-vi' || quizMode === 'cn-en'">
+                            <p class="cn-font text-5xl md:text-6xl font-bold text-slate-900 mb-3 leading-tight">{{ currentQuestion.word }}</p>
+                            <!-- Hiển thị pinyin có điều kiện -->
+                            <p v-if="showPinyin" class="text-lg text-blue-700/90 font-medium">[{{ currentQuestion.pinyin }}]</p>
+                        </template>
+                        <template v-else-if="quizMode === 'vi-cn'">
+                            <p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.meaning }}</p>
+                            <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
+                        </template>
+                        <template v-else>
+                            <p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.english }}</p>
+                            <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
+                        </template>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <button v-for="(opt, idx) in options" :key="idx" type="button" @click="checkAnswer(opt)" :disabled="answered" class="quiz-option p-4 md:p-5 rounded-2xl border-2 text-left flex items-center justify-between gap-3 min-h-[3.5rem]" :class="getOptionClass(opt)">
@@ -256,4 +270,3 @@
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
-

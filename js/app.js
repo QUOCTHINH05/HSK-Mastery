@@ -5,6 +5,13 @@ import { speakChinese, stopSpeaking, playVoiceSample, refreshZhVoices, playEffec
 
 const HSK_LEVELS = [1, 2, 3, 4];
 const DICT_PAGE_SIZE = 100;
+const PINYIN_KEY = 'hsk_mastery_show_pinyin_v1';
+const savedShowPinyin = localStorage.getItem(PINYIN_KEY);
+const showPinyin = ref(savedShowPinyin !== null ? savedShowPinyin === 'true' : true);
+function toggleShowPinyin() {
+    showPinyin.value = !showPinyin.value;
+    localStorage.setItem(PINYIN_KEY, showPinyin.value);
+}
 
 function normalizeCollections(raw) {
     const empty = { 1: [], 2: [], 3: [], 4: [] };
@@ -335,6 +342,8 @@ createApp({
             toggleTheme,
             notebookKey,
             HSK_LEVELS,
+            showPinyin,
+            toggleShowPinyin,
         };
     },
 }).mount('#app');

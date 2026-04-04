@@ -1,7 +1,7 @@
 ﻿import { createApp, ref, computed, onMounted, watch } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 import { NB_KEY, quizModes, wordCountOptions, voiceOptions, VOICE_KEY } from './config.js';
 import { fetchCsv, parseRows } from './csv.js';
-import { speakChinese, stopSpeaking, playVoiceSample, refreshZhVoices } from './speech.js';
+import { speakChinese, stopSpeaking, playVoiceSample, refreshZhVoices, playEffect } from './speech.js';
 
 const HSK_LEVELS = [1, 2, 3, 4];
 const DICT_PAGE_SIZE = 100;
@@ -199,8 +199,12 @@ createApp({
             answered.value = true;
             const ok = isCorrect(opt);
             wasLastCorrect.value = ok;
-            if (ok) speak(currentQuestion.value.word);
-            else addToCollection(currentQuestion.value, true);
+            if (ok) {
+                playEffect('right');
+                setTimeout(() => {speak(currentQuestion.value.word);
+                }, 1000);
+            }
+            else {playEffect('wrong'); addToCollection(currentQuestion.value, true);}
         };
 
         const getOptionClass = (opt) => {

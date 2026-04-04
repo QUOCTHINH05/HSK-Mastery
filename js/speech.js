@@ -135,3 +135,12 @@ export function stopVoiceSample() {
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     window.speechSynthesis.addEventListener('voiceschanged', () => refreshZhVoices());
 }
+
+/**
+ * Phát âm thanh hiệu ứng (đúng/sai)
+ * @param {string} type - 'right' hoặc 'wrong'
+ */
+export function playEffect(type) {
+    const audio = new Audio(`voices/${type}.mp3`);
+    audio.play().catch(e => console.warn("Audio play blocked:", e));
+}

@@ -19,7 +19,7 @@ export const wordCountOptions = [10, 20, 50, 100];
 /** Giọng đọc: file MP3 trong `voices/` để nghe thử; đọc từ/câu dùng TTS trình duyệt theo preset tương ứng. */
 /** @type {VoiceOption[]} */
 export const voiceOptions = [
-    { id: 'daoMing', label: 'Dao Ming', file: 'voices/DaoMingvoice1.mp3' },
+    { id: 'daoMing', label: 'Dao Ming', file: 'voices/DaoMingVoice1.mp3' },
     { id: 'guoChao', label: 'Guo Chao', file: 'voices/GuochaoVoice1.mp3' },
     { id: 'jing', label: 'Jing', file: 'voices/JingVoice1.mp3' },
     { id: 'jing2', label: 'Jing2', file: 'voices/Jing2.mp3' },

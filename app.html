@@ -1,12 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSK Mastery — Ứng dụng ôn từ vựng HSK1–4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script>
@@ -22,241 +25,354 @@
         };
     </script>
 </head>
+
 <body class="min-h-screen text-slate-800 antialiased bg-slate-50">
-<div id="app" class="min-h-screen flex flex-col">
-    <header class="hero-gradient text-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-6 md:py-8">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                    <h1 class="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-3">
-                        <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
-                            <i class="fa-solid fa-dragon text-xl"></i>
-                        </span>
-                        HSK Mastery
-                    </h1>
-                    <p class="text-sky-100/90 mt-2 text-sm md:text-base max-w-xl">Học & ôn từ vựng tiếng Trung — trắc nghiệm, từ điển, phát âm, collections.</p>
-                </div>
-                <nav class="flex flex-wrap gap-2 items-center">
-                    <a href="index.html" class="inline-flex items-center px-3 py-2 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/15 transition-colors" title="Trang giới thiệu"><i class="fa-solid fa-house sm:mr-2"></i><span class="hidden sm:inline">Trang chủ</span></a>
-                    <button type="button" @click="showView('dashboard')" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all" :class="currentView === 'dashboard' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i class="fa-solid fa-layer-group mr-2"></i>Học</button>
-                    <button type="button" @click="showView('dictionary')" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all" :class="currentView === 'dictionary' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i class="fa-solid fa-book mr-2"></i>Từ điển</button>
-                    <button type="button" @click="showView('reader')" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all" :class="currentView === 'reader' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i class="fa-solid fa-align-left mr-2"></i>Đọc văn bản</button>
-                    <button type="button" @click="showView('notebook')" class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all relative" :class="currentView === 'notebook' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i class="fa-solid fa-bookmark mr-2"></i>Collections
-                        <span v-if="notebookTotal" class="ml-1 inline-flex min-w-[1.25rem] h-5 px-1 items-center justify-center rounded-full bg-rose-500 text-[11px] text-white font-bold">{{ notebookTotal }}</span>
-                    </button>
-                    <button type="button" @click="toggleTheme" aria-label="Bật/Tắt Dark Mode"
-                        class="h-10 w-10 inline-flex items-center justify-center rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/10 transition-colors"
-                        title="Dark mode">
-                        <i :class="isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <div class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 md:py-10">
-        <div v-if="loadError" class="rounded-2xl border border-rose-200 bg-rose-50 p-6 text-rose-800">
-            <p class="font-semibold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Không tải được dữ liệu CSV</p>
-            <p class="text-sm text-rose-700/90 mb-4">{{ loadError }}</p>
-            <p class="text-sm text-slate-600">Mở trang qua máy chủ cục bộ để trình duyệt cho phép tải file CSV.</p>
-        </div>
-
-        <div v-else-if="loading" class="flex flex-col items-center justify-center py-24 text-slate-500">
-            <div class="h-12 w-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
-            <p class="font-medium">Đang tải từ vựng từ CSV…</p>
-        </div>
-
-        <main v-else-if="currentView === 'dashboard'" class="space-y-8 fade-in">
-            <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
-                <h2 class="text-lg font-bold text-slate-900 mb-1">Chế độ trắc nghiệm</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-                    <button v-for="m in quizModes" :key="m.id" type="button" @click="quizMode = m.id" class="flex items-start gap-3 p-4 rounded-2xl border-2 text-left transition-all" :class="quizMode === m.id ? 'border-blue-500 bg-blue-50/80 shadow-sm' : 'border-slate-100 bg-white hover:border-slate-200'">
-                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg" :class="quizMode === m.id ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"><i :class="m.icon"></i></span>
-                        <span><span class="block font-semibold text-slate-900">{{ m.label }}</span><span class="text-xs text-slate-500">{{ m.hint }}</span></span>
-                    </button>
-                </div>
-            </section>
-
-            <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
-                <h2 class="text-lg font-bold text-slate-900 mb-1">Số từ trong 1 phiên học</h2>
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <button v-for="n in wordCountOptions" :key="n" type="button" @click="sessionWordCount = n" class="min-w-[4.5rem] px-5 py-3 rounded-2xl border-2 font-bold text-lg transition-all" :class="sessionWordCount === n ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm' : 'border-slate-100 bg-white text-slate-600 hover:border-slate-200'">{{ n }}</button>
-                </div>
-            </section>
-
-            <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
-                <h2 class="text-lg font-bold text-slate-900 mb-1">Giọng đọc tiếng Trung</h2>
-                <div class="space-y-3 mt-4">
-                    <label v-for="v in voiceOptions" :key="v.id" class="flex items-center gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-all" :class="selectedVoiceId === v.id ? 'border-blue-500 bg-blue-50/80' : 'border-slate-100 bg-white hover:border-slate-200'">
-                        <input type="radio" class="sr-only" :value="v.id" v-model="selectedVoiceId">
-                        <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg" :class="selectedVoiceId === v.id ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"><i class="fa-solid fa-microphone"></i></span>
-                        <span class="flex-1"><span class="block font-semibold text-slate-900">{{ v.label }}</span><span class="text-xs text-slate-500">{{ v.file }}</span></span>
-                        <button type="button" @click.stop.prevent="previewVoice(v.file)" class="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-blue-50 hover:text-blue-700"><i class="fa-solid fa-headphones"></i></button>
-                    </label>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-bold text-slate-900 mb-4">Chọn cấp độ HSK</h2>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    <button v-for="lvl in [1,2,3,4]" :key="lvl" type="button" @click="startLevel(lvl)" class="card-hover group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 text-left shadow-sm hover:border-blue-300">
-                        <div class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-50 opacity-80 group-hover:bg-blue-100 transition-colors"></div>
-                        <div class="relative">
-                            <div class="text-xs font-bold uppercase tracking-wider text-blue-600/80 mb-1">HSK</div>
-                            <div class="text-4xl font-black text-slate-900">{{ lvl }}</div>
-                            <div class="mt-4 flex items-center text-sm text-slate-500"><span>{{ getWordCount(lvl) }} từ</span><i class="fa-solid fa-arrow-right ml-auto text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
-                        </div>
-                    </button>
-                </div>
-            </section>
-        </main>
-
-        <main v-else-if="currentView === 'dictionary'" class="fade-in space-y-5">
-            <section class="glass rounded-3xl border border-slate-200/80 p-6 shadow-sm">
-                <div class="flex flex-wrap gap-2 items-center justify-between">
-                    <h2 class="text-2xl font-bold text-slate-900">Từ điển HSK</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <button v-for="lvl in [1,2,3,4]" :key="`dict-level-${lvl}`" @click="selectDictLevel(lvl)" class="px-4 py-2 rounded-xl text-sm font-bold border-2 transition-all" :class="dictLevel === lvl ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-slate-200 bg-white text-slate-600'">HSK {{ lvl }} ({{ getWordCount(lvl) }})</button>
+    <div id="app" class="min-h-screen flex flex-col">
+        <header class="hero-gradient text-white shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 py-6 md:py-8">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-3">
+                            <span
+                                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+                                <i class="fa-solid fa-dragon text-xl"></i>
+                            </span>
+                            HSK Mastery
+                        </h1>
+                        <p class="text-sky-100/90 mt-2 text-sm md:text-base max-w-xl">Học & ôn từ vựng tiếng Trung —
+                            trắc nghiệm, từ điển, phát âm, collections.</p>
                     </div>
-                </div>
-                <div class="mt-4 flex flex-wrap gap-2">
-                    <button v-for="page in dictTabPages" :key="`dict-page-${page}`" @click="selectDictPage(page)" class="px-3 py-1.5 rounded-lg text-sm font-semibold border transition-all" :class="dictPage === page ? 'border-blue-500 bg-blue-500 text-white' : 'border-slate-200 bg-white text-slate-600'">Tab {{ page }} <span class="text-xs opacity-80">({{ (page - 1) * 100 + 1 }}-{{ Math.min(page * 100, getWordCount(dictLevel)) }})</span></button>
-                </div>
-            </section>
-
-            <section class="glass rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
-                <div class="overflow-x-auto">
-                    <table class="w-full min-w-[960px]">
-                        <thead class="bg-slate-50 border-b border-slate-200">
-                            <tr class="text-left text-sm text-slate-700">
-                                <th class="px-3 py-3">#</th>
-                                <th class="px-3 py-3">Hán tự</th>
-                                <th class="px-3 py-3">Pinyin</th>
-                                <th class="px-3 py-3">Từ loại</th>
-                                <th class="px-3 py-3">Nghĩa Việt</th>
-                                <th class="px-3 py-3">Nghĩa Anh</th>
-                                <th class="px-3 py-3 text-center">Nghe</th>
-                                <th class="px-3 py-3 text-center">Collections</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(w, idx) in dictVisibleWords" :key="`dict-${w.level}-${w.word}-${idx}`" class="border-b border-slate-100 hover:bg-blue-50/40 text-sm">
-                                <td class="px-3 py-3 text-slate-500">{{ (dictPage - 1) * 100 + idx + 1 }}</td>
-                                <td class="px-3 py-3 cn-font text-xl font-bold text-slate-900">{{ w.word }}</td>
-                                <td class="px-3 py-3 text-slate-700">{{ w.pinyin }}</td>
-                                <td class="px-3 py-3 text-slate-600">{{ w.partOfSpeech || '—' }}</td>
-                                <td class="px-3 py-3 text-slate-700">{{ w.meaning }}</td>
-                                <td class="px-3 py-3 text-slate-600">{{ w.english }}</td>
-                                <td class="px-3 py-3 text-center"><button @click="speak(w.word)" class="p-2 rounded-lg hover:bg-blue-100 text-blue-700"><i class="fa-solid fa-volume-high"></i></button></td>
-                                <td class="px-3 py-3 text-center"><button @click="addToCollection(w)" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700 hover:bg-rose-100 font-semibold"><i class="fa-solid fa-bookmark mr-1"></i>Thêm</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </main>
-
-        <main v-else-if="currentView === 'reader'" class="fade-in">
-            <div class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900">Đọc văn bản tiếng Trung</h2>
-                    <p class="text-sm text-slate-500 mt-2">Dán hoặc nhập đoạn chữ Hán. Giọng hiện tại: <strong class="text-blue-700">{{ selectedVoiceLabel }}</strong>.</p>
-                </div>
-                <textarea v-model="readerText" rows="10" class="cn-font w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-lg leading-relaxed text-slate-900 shadow-inner focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200" placeholder="在此输入中文……"></textarea>
-                <div class="flex flex-wrap items-center gap-3">
-                    <button type="button" @click="speakReader" :disabled="readerSpeaking" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-blue-600 text-white font-bold shadow-lg hover:bg-blue-700 disabled:opacity-50"><i class="fa-solid fa-volume-high"></i>{{ readerSpeaking ? 'Đang đọc…' : 'Đọc' }}</button>
-                    <button type="button" @click="stopReader" :disabled="!readerSpeaking" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-slate-200 bg-white font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-40"><i class="fa-solid fa-stop"></i>Dừng</button>
+                    <nav class="flex flex-wrap gap-2 items-center">
+                        <a href="index.html"
+                            class="inline-flex items-center px-3 py-2 rounded-xl text-sm font-semibold text-white/90 hover:bg-white/15 transition-colors nav-tab"
+                            title="Trang giới thiệu"><i class="fa-solid fa-house sm:mr-2"></i><span
+                                class="hidden sm:inline">Trang chủ</span></a>
+                        <button type="button" @click="showView('dashboard')"
+                            class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all nav-tab"
+                            :class="currentView === 'dashboard' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i
+                                class="fa-solid fa-layer-group mr-2"></i>Học</button>
+                        <button type="button" @click="showView('dictionary')"
+                            class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all nav-tab"
+                            :class="currentView === 'dictionary' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i
+                                class="fa-solid fa-book mr-2"></i>Từ điển</button>
+                        <button type="button" @click="showView('reader')"
+                            class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all nav-tab"
+                            :class="currentView === 'reader' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i
+                                class="fa-solid fa-align-left mr-2"></i>Đọc văn bản</button>
+                        <button type="button" @click="showView('notebook')"
+                            class="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all relative nav-tab"
+                            :class="currentView === 'notebook' ? 'bg-white text-blue-800 shadow-md' : 'bg-white/15 hover:bg-white/25 text-white'"><i
+                                class="fa-solid fa-bookmark mr-2"></i>Collections
+                            <span v-if="notebookTotal"
+                                class="ml-1 inline-flex min-w-[1.25rem] h-5 px-1 items-center justify-center rounded-full bg-rose-500 text-[11px] text-white font-bold">{{
+                                notebookTotal }}</span>
+                        </button>
+                        <button type="button" @click="toggleTheme" aria-label="Bật/Tắt Dark Mode"
+                            class="h-10 w-10 inline-flex items-center justify-center rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/10 transition-colors nav-tab"
+                            title="Dark mode">
+                            <i :class="isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'"></i>
+                        </button>
+                    </nav>
                 </div>
             </div>
-        </main>
+        </header>
 
-        <main v-else-if="currentView === 'quiz'" class="fade-in">
-            <div class="glass rounded-3xl border border-slate-200/80 shadow-lg overflow-hidden">
-                <div class="flex items-center justify-between gap-3 px-4 py-4 md:px-8 border-b border-slate-100 bg-white/50">
-                    <button type="button" @click="exitQuiz" class="text-slate-500 hover:text-slate-800 text-sm font-medium"><i class="fa-solid fa-arrow-left mr-2"></i>Thoát</button>
-                    <div class="text-center flex-1 min-w-0">
-                        <div class="text-[10px] font-bold uppercase tracking-widest text-blue-600">HSK {{ currentLevel }} · {{ modeLabel }}</div>
-                        <div class="text-sm text-slate-500 truncate">Phiên {{ quizQueue.length }} từ · Câu {{ quizIndex + 1 }} / {{ quizQueue.length }}</div>
-                    </div>
-                    <!-- Nút bật/tắt hiển thị Pinyin -->
-                    <button type="button" @click="toggleShowPinyin" class="text-slate-500 hover:text-slate-800 text-sm font-medium flex items-center gap-1" title="Hiển thị/ẩn Pinyin">
-                        <i :class="showPinyin ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"></i>
-                        <span class="hidden sm:inline ml-1">Pinyin</span>
-                    </button>
-                </div>
-                <div class="h-1.5 bg-slate-100"><div class="progress-shine h-full rounded-r transition-all duration-500 ease-out" :style="{ width: ((quizIndex + 1) / Math.max(quizQueue.length, 1)) * 100 + '%' }"></div></div>
-                <div class="p-6 md:p-10">
-                    <div class="text-center mb-10">
-                        <button type="button" @click="speak(currentQuestion.word)" class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors shadow-inner" title="Nghe phát âm"><i class="fa-solid fa-volume-high text-xl"></i></button>
-                        <template v-if="quizMode === 'cn-vi' || quizMode === 'cn-en'">
-                            <p class="cn-font text-5xl md:text-6xl font-bold text-slate-900 mb-3 leading-tight">{{ currentQuestion.word }}</p>
-                            <!-- Hiển thị pinyin có điều kiện -->
-                            <p v-if="showPinyin" class="text-lg text-blue-700/90 font-medium">[{{ currentQuestion.pinyin }}]</p>
-                        </template>
-                        <template v-else-if="quizMode === 'vi-cn'">
-                            <p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.meaning }}</p>
-                            <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
-                        </template>
-                        <template v-else>
-                            <p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">{{ currentQuestion.english }}</p>
-                            <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
-                        </template>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <button v-for="(opt, idx) in options" :key="idx" type="button" @click="checkAnswer(opt)" :disabled="answered" class="quiz-option p-4 md:p-5 rounded-2xl border-2 text-left flex items-center justify-between gap-3 min-h-[3.5rem]" :class="getOptionClass(opt)">
-                            <span class="font-medium leading-snug break-words flex-1" :class="optionTextClass(opt)">{{ optionLabel(opt) }}</span>
-                            <span class="shrink-0 text-lg"><i v-if="answered && isCorrect(opt)" class="fa-solid fa-circle-check text-emerald-500"></i><i v-else-if="answered && selectedOption === opt && !isCorrect(opt)" class="fa-solid fa-circle-xmark text-rose-500"></i></span>
+        <div class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 md:py-10">
+            <div v-if="loadError" class="rounded-2xl border border-rose-200 bg-rose-50 p-6 text-rose-800">
+                <p class="font-semibold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Không tải được dữ
+                    liệu CSV</p>
+                <p class="text-sm text-rose-700/90 mb-4">{{ loadError }}</p>
+                <p class="text-sm text-slate-600">Mở trang qua máy chủ cục bộ để trình duyệt cho phép tải file CSV.</p>
+            </div>
+
+            <div v-else-if="loading" class="flex flex-col items-center justify-center py-24 text-slate-500">
+                <div class="h-12 w-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
+                <p class="font-medium">Đang tải từ vựng từ CSV…</p>
+            </div>
+
+            <main v-else-if="currentView === 'dashboard'" class="space-y-8 fade-in">
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-900 mb-1">Chế độ trắc nghiệm</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                        <button v-for="m in quizModes" :key="m.id" type="button" @click="quizMode = m.id"
+                            class="flex items-start gap-3 p-4 rounded-2xl border-2 text-left transition-all quiz-mode"
+                            :class="quizMode === m.id ? 'border-blue-500 bg-blue-50/80 shadow-sm' : 'border-slate-100 bg-white hover:border-slate-200'">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg"
+                                :class="quizMode === m.id ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"><i
+                                    :class="m.icon"></i></span>
+                            <span><span class="block font-semibold text-slate-900">{{ m.label }}</span><span
+                                    class="text-xs text-slate-500">{{ m.hint }}</span></span>
                         </button>
                     </div>
-                    <div v-if="answered" class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2 border-t border-slate-100">
-                        <p v-if="!wasLastCorrect" class="text-sm text-rose-600 font-medium flex items-center gap-2"><i class="fa-solid fa-bookmark"></i>Đã thêm vào collections HSK {{ currentLevel }}</p>
-                        <p v-else class="text-sm text-emerald-600 font-medium"><i class="fa-solid fa-check mr-2"></i>Chính xác!</p>
-                        <button type="button" @click="nextQuestion" class="px-8 py-3.5 rounded-2xl bg-blue-600 text-white font-bold shadow-lg hover:bg-blue-700 transition-colors sm:ml-auto">{{ quizIndex < quizQueue.length - 1 ? 'Câu tiếp' : 'Hoàn thành' }}<i class="fa-solid fa-arrow-right ml-2"></i></button>
+                </section>
+
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-900 mb-1">Số từ trong 1 phiên học</h2>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <button v-for="n in wordCountOptions" :key="n" type="button" @click="sessionWordCount = n"
+                            class="min-w-[4.5rem] px-5 py-3 rounded-2xl border-2 font-bold text-lg transition-all count-option"
+                            :class="sessionWordCount === n ? 'border-blue-500 bg-blue-50 text-blue-800 shadow-sm' : 'border-slate-100 bg-white text-slate-600 hover:border-slate-200'">{{
+                            n }}</button>
                     </div>
-                </div>
-            </div>
-        </main>
+                </section>
 
-        <main v-else-if="currentView === 'notebook'" class="fade-in space-y-6">
-            <div class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
-                <div class="flex items-center justify-between gap-4 mb-6">
-                    <div>
-                        <h2 class="text-2xl font-bold text-slate-900">Collections ôn tập</h2>
-                        <p class="text-sm text-slate-500">Danh sách từ theo từng cấp độ HSK.</p>
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-900 mb-1">Giọng đọc tiếng Trung</h2>
+                    <div class="space-y-3 mt-4">
+                        <label v-for="v in voiceOptions" :key="v.id"
+                            class="flex items-center gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-all voice-option"
+                            :class="selectedVoiceId === v.id ? 'border-blue-500 bg-blue-50/80' : 'border-slate-100 bg-white hover:border-slate-200'">
+                            <input type="radio" class="sr-only" :value="v.id" v-model="selectedVoiceId">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-lg"
+                                :class="selectedVoiceId === v.id ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'"><i
+                                    class="fa-solid fa-microphone"></i></span>
+                            <span class="flex-1"><span class="block font-semibold text-slate-900">{{ v.label
+                                    }}</span><span class="text-xs text-slate-500">{{ v.file }}</span></span>
+                            <button type="button" @click.stop.prevent="previewVoice(v.file)"
+                                class="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 hover:bg-blue-50 hover:text-blue-700"><i
+                                    class="fa-solid fa-headphones"></i></button>
+                        </label>
                     </div>
-                    <button v-if="notebookTotal" type="button" @click="clearAllCollections" class="text-sm text-rose-600 hover:text-rose-800 font-medium underline">Xóa tất cả</button>
-                </div>
+                </section>
 
-                <div v-if="!notebookTotal" class="text-center py-16 text-slate-400"><div class="text-5xl mb-4 opacity-60">📚</div><p>Chưa có từ nào trong collections.</p></div>
+                <section>
+                    <h2 class="text-lg font-bold text-slate-900 mb-4">Chọn cấp độ HSK</h2>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <button v-for="lvl in [1,2,3,4]" :key="lvl" type="button" @click="startLevel(lvl)"
+                            class="card-hover group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 text-left shadow-sm hover:border-blue-300">
+                            <div
+                                class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-50 opacity-80 group-hover:bg-blue-100 transition-colors">
+                            </div>
+                            <div class="relative">
+                                <div class="text-xs font-bold uppercase tracking-wider text-blue-600/80 mb-1">HSK</div>
+                                <div class="text-4xl font-black text-slate-900">{{ lvl }}</div>
+                                <div class="mt-4 flex items-center text-sm text-slate-500"><span>{{ getWordCount(lvl) }}
+                                        từ</span><i
+                                        class="fa-solid fa-arrow-right ml-auto text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </section>
+            </main>
 
-                <div v-else class="space-y-6">
-                    <section v-for="level in HSK_LEVELS" :key="`collection-${level}`" class="rounded-2xl border border-slate-200 bg-white p-4 md:p-5">
-                        <div class="flex items-center justify-between gap-3 mb-3">
-                            <h3 class="font-bold text-slate-900">HSK {{ level }} <span class="text-sm text-slate-500 font-medium">({{ collections[level].length }} từ)</span></h3>
-                            <button v-if="collections[level].length" @click="clearCollection(level)" class="text-xs text-rose-600 hover:text-rose-800 underline">Xóa cấp này</button>
+            <main v-else-if="currentView === 'dictionary'" class="fade-in space-y-5">
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 shadow-sm">
+                    <div class="flex flex-wrap gap-2 items-center justify-between">
+                        <h2 class="text-2xl font-bold text-slate-900">Từ điển HSK</h2>
+                        <div class="flex flex-wrap gap-2">
+                            <button v-for="lvl in [1,2,3,4]" :key="`dict-level-${lvl}`" @click="selectDictLevel(lvl)"
+                                class="px-4 py-2 rounded-xl text-sm font-bold border-2 transition-all"
+                                :class="dictLevel === lvl ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-slate-200 bg-white text-slate-600'">HSK
+                                {{ lvl }} ({{ getWordCount(lvl) }})</button>
                         </div>
-                        <div v-if="!collections[level].length" class="text-sm text-slate-400 py-3">Chưa có từ trong cấp này.</div>
-                        <ul v-else class="divide-y divide-slate-100">
-                            <li v-for="(w, index) in collections[level]" :key="notebookKey(w, index)" class="py-3 flex flex-col md:flex-row md:items-center gap-3">
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><span class="cn-font text-2xl font-bold text-slate-900">{{ w.word }}</span><span class="text-blue-700 font-medium">{{ w.pinyin }}</span><span class="text-xs text-slate-500">{{ w.partOfSpeech || '—' }}</span></div>
-                                    <p class="text-slate-600 text-sm">{{ w.meaning }}</p>
-                                    <p class="text-slate-400 text-xs">{{ w.english }}</p>
-                                </div>
-                                <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" @click="speak(w.word)" class="p-3 rounded-xl text-slate-500 hover:bg-blue-50 hover:text-blue-700"><i class="fa-solid fa-volume-high"></i></button>
-                                    <button type="button" @click="removeFromCollection(level, index)" class="p-3 rounded-xl text-slate-400 hover:bg-rose-50 hover:text-rose-600"><i class="fa-solid fa-trash"></i></button>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </main>
-    </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <button v-for="page in dictTabPages" :key="`dict-page-${page}`" @click="selectDictPage(page)"
+                            class="px-3 py-1.5 rounded-lg text-sm font-semibold border transition-all"
+                            :class="dictPage === page ? 'border-blue-500 bg-blue-500 text-white' : 'border-slate-200 bg-white text-slate-600'">Tab
+                            {{ page }} <span class="text-xs opacity-80">({{ (page - 1) * 100 + 1 }}-{{ Math.min(page *
+                                100, getWordCount(dictLevel)) }})</span></button>
+                    </div>
+                </section>
 
-    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-2 px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-medium shadow-2xl opacity-0 transition-all duration-300 pointer-events-none z-50 max-w-[90vw] text-center"></div>
-</div>
+                <section class="glass rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[960px]">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr class="text-left text-sm text-slate-700">
+                                    <th class="px-3 py-3">#</th>
+                                    <th class="px-3 py-3">Hán tự</th>
+                                    <th class="px-3 py-3">Pinyin</th>
+                                    <th class="px-3 py-3">Từ loại</th>
+                                    <th class="px-3 py-3">Nghĩa Việt</th>
+                                    <th class="px-3 py-3">Nghĩa Anh</th>
+                                    <th class="px-3 py-3 text-center">Nghe</th>
+                                    <th class="px-3 py-3 text-center">Collections</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(w, idx) in dictVisibleWords" :key="`dict-${w.level}-${w.word}-${idx}`"
+                                    class="border-b border-slate-100 hover:bg-blue-50/40 text-sm">
+                                    <td class="px-3 py-3 text-slate-500">{{ (dictPage - 1) * 100 + idx + 1 }}</td>
+                                    <td class="px-3 py-3 cn-font text-xl font-bold text-slate-900">{{ w.word }}</td>
+                                    <td class="px-3 py-3 text-slate-700">{{ w.pinyin }}</td>
+                                    <td class="px-3 py-3 text-slate-600">{{ w.partOfSpeech || '—' }}</td>
+                                    <td class="px-3 py-3 text-slate-700">{{ w.meaning }}</td>
+                                    <td class="px-3 py-3 text-slate-600">{{ w.english }}</td>
+                                    <td class="px-3 py-3 text-center"><button @click="speak(w.word)"
+                                            class="p-2 rounded-lg hover:bg-blue-100 text-blue-700"><i
+                                                class="fa-solid fa-volume-high"></i></button></td>
+                                    <td class="px-3 py-3 text-center"><button @click="addToCollection(w)"
+                                            class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700 hover:bg-rose-100 font-semibold"><i
+                                                class="fa-solid fa-bookmark mr-1"></i>Thêm</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <main v-else-if="currentView === 'reader'" class="fade-in">
+                <div class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">Đọc văn bản tiếng Trung</h2>
+                        <p class="text-sm text-slate-500 mt-2">Dán hoặc nhập đoạn chữ Hán. Giọng hiện tại: <strong
+                                class="text-blue-700">{{ selectedVoiceLabel }}</strong>.</p>
+                    </div>
+                    <textarea v-model="readerText" rows="10"
+                        class="cn-font w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-lg leading-relaxed text-slate-900 shadow-inner focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        placeholder="在此输入中文……"></textarea>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button type="button" @click="speakReader" :disabled="readerSpeaking"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-blue-600 text-white font-bold shadow-lg hover:bg-blue-700 disabled:opacity-50"><i
+                                class="fa-solid fa-volume-high"></i>{{ readerSpeaking ? 'Đang đọc…' : 'Đọc' }}</button>
+                        <button type="button" @click="stopReader" :disabled="!readerSpeaking"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border-2 border-slate-200 bg-white font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-40"><i
+                                class="fa-solid fa-stop"></i>Dừng</button>
+                    </div>
+                </div>
+            </main>
+
+            <main v-else-if="currentView === 'quiz'" class="fade-in">
+                <div class="glass rounded-3xl border border-slate-200/80 shadow-lg overflow-hidden">
+                    <div
+                        class="flex items-center justify-between gap-3 px-4 py-4 md:px-8 border-b border-slate-100 bg-white/50">
+                        <button type="button" @click="exitQuiz"
+                            class="text-slate-500 hover:text-slate-800 text-sm font-medium"><i
+                                class="fa-solid fa-arrow-left mr-2"></i>Thoát</button>
+                        <div class="text-center flex-1 min-w-0">
+                            <div class="text-[10px] font-bold uppercase tracking-widest text-blue-600">HSK {{
+                                currentLevel }} · {{ modeLabel }}</div>
+                            <div class="text-sm text-slate-500 truncate">Phiên {{ quizQueue.length }} từ · Câu {{
+                                quizIndex + 1 }} / {{ quizQueue.length }}</div>
+                        </div>
+                        <!-- Nút bật/tắt hiển thị Pinyin -->
+                        <button type="button" @click="toggleShowPinyin"
+                            class="text-slate-500 hover:text-slate-800 text-sm font-medium flex items-center gap-1"
+                            title="Hiển thị/ẩn Pinyin">
+                            <i :class="showPinyin ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'"></i>
+                            <span class="hidden sm:inline ml-1">Pinyin</span>
+                        </button>
+                    </div>
+                    <div class="h-1.5 bg-slate-100">
+                        <div class="progress-shine h-full rounded-r transition-all duration-500 ease-out"
+                            :style="{ width: ((quizIndex + 1) / Math.max(quizQueue.length, 1)) * 100 + '%' }"></div>
+                    </div>
+                    <div class="p-6 md:p-10">
+                        <div class="text-center mb-10">
+                            <button type="button" @click="speak(currentQuestion.word)"
+                                class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors shadow-inner"
+                                title="Nghe phát âm"><i class="fa-solid fa-volume-high text-xl"></i></button>
+                            <template v-if="quizMode === 'cn-vi' || quizMode === 'cn-en'">
+                                <p class="cn-font text-5xl md:text-6xl font-bold text-slate-900 mb-3 leading-tight">{{
+                                    currentQuestion.word }}</p>
+                                <!-- Hiển thị pinyin có điều kiện -->
+                                <p v-if="showPinyin" class="text-lg text-blue-700/90 font-medium">[{{
+                                    currentQuestion.pinyin }}]</p>
+                            </template>
+                            <template v-else-if="quizMode === 'vi-cn'">
+                                <p
+                                    class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">
+                                    {{ currentQuestion.meaning }}</p>
+                                <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
+                            </template>
+                            <template v-else>
+                                <p
+                                    class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">
+                                    {{ currentQuestion.english }}</p>
+                                <p class="text-sm text-slate-400 mt-3">Chọn đáp án đúng bằng chữ Hán</p>
+                            </template>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <button v-for="(opt, idx) in options" :key="idx" type="button" @click="checkAnswer(opt)"
+                                :disabled="answered"
+                                class="quiz-option p-4 md:p-5 rounded-2xl border-2 text-left flex items-center justify-between gap-3 min-h-[3.5rem]"
+                                :class="getOptionClass(opt)">
+                                <span class="font-medium leading-snug break-words flex-1"
+                                    :class="optionTextClass(opt)">{{ optionLabel(opt) }}</span>
+                                <span class="shrink-0 text-lg"><i v-if="answered && isCorrect(opt)"
+                                        class="fa-solid fa-circle-check text-emerald-500"></i><i
+                                        v-else-if="answered && selectedOption === opt && !isCorrect(opt)"
+                                        class="fa-solid fa-circle-xmark text-rose-500"></i></span>
+                            </button>
+                        </div>
+                        <div v-if="answered"
+                            class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2 border-t border-slate-100">
+                            <p v-if="!wasLastCorrect" class="text-sm text-rose-600 font-medium flex items-center gap-2">
+                                <i class="fa-solid fa-bookmark"></i>Đã thêm vào collections HSK {{ currentLevel }}
+                            </p>
+                            <p v-else class="text-sm text-emerald-600 font-medium"><i
+                                    class="fa-solid fa-check mr-2"></i>Chính xác!</p>
+                            <button type="button" @click="nextQuestion"
+                                class="px-8 py-3.5 rounded-2xl bg-blue-600 text-white font-bold shadow-lg hover:bg-blue-700 transition-colors sm:ml-auto">{{
+                                quizIndex < quizQueue.length - 1 ? 'Câu tiếp' : 'Hoàn thành' }}<i
+                                    class="fa-solid fa-arrow-right ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <main v-else-if="currentView === 'notebook'" class="fade-in space-y-6">
+                <div class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-900">Collections ôn tập</h2>
+                            <p class="text-sm text-slate-500">Danh sách từ theo từng cấp độ HSK.</p>
+                        </div>
+                        <button v-if="notebookTotal" type="button" @click="clearAllCollections"
+                            class="text-sm text-rose-600 hover:text-rose-800 font-medium underline">Xóa tất cả</button>
+                    </div>
+
+                    <div v-if="!notebookTotal" class="text-center py-16 text-slate-400">
+                        <div class="text-5xl mb-4 opacity-60">📚</div>
+                        <p>Chưa có từ nào trong collections.</p>
+                    </div>
+
+                    <div v-else class="space-y-6">
+                        <section v-for="level in HSK_LEVELS" :key="`collection-${level}`"
+                            class="rounded-2xl border border-slate-200 bg-white p-4 md:p-5">
+                            <div class="flex items-center justify-between gap-3 mb-3">
+                                <h3 class="font-bold text-slate-900">HSK {{ level }} <span
+                                        class="text-sm text-slate-500 font-medium">({{ collections[level].length }}
+                                        từ)</span></h3>
+                                <button v-if="collections[level].length" @click="clearCollection(level)"
+                                    class="text-xs text-rose-600 hover:text-rose-800 underline">Xóa cấp này</button>
+                            </div>
+                            <div v-if="!collections[level].length" class="text-sm text-slate-400 py-3">Chưa có từ trong
+                                cấp này.</div>
+                            <ul v-else class="divide-y divide-slate-100">
+                                <li v-for="(w, index) in collections[level]" :key="notebookKey(w, index)"
+                                    class="py-3 flex flex-col md:flex-row md:items-center gap-3">
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><span
+                                                class="cn-font text-2xl font-bold text-slate-900">{{ w.word
+                                                }}</span><span class="text-blue-700 font-medium">{{ w.pinyin
+                                                }}</span><span class="text-xs text-slate-500">{{ w.partOfSpeech || '—'
+                                                }}</span></div>
+                                        <p class="text-slate-600 text-sm">{{ w.meaning }}</p>
+                                        <p class="text-slate-400 text-xs">{{ w.english }}</p>
+                                    </div>
+                                    <div class="flex items-center gap-2 shrink-0">
+                                        <button type="button" @click="speak(w.word)"
+                                            class="p-3 rounded-xl text-slate-500 hover:bg-blue-50 hover:text-blue-700"><i
+                                                class="fa-solid fa-volume-high"></i></button>
+                                        <button type="button" @click="removeFromCollection(level, index)"
+                                            class="p-3 rounded-xl text-slate-400 hover:bg-rose-50 hover:text-rose-600"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div id="toast"
+            class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-2 px-6 py-3 rounded-full bg-slate-900 text-white text-sm font-medium shadow-2xl opacity-0 transition-all duration-300 pointer-events-none z-50 max-w-[90vw] text-center">
+        </div>
+    </div>
 
     <script>
         (() => {
@@ -267,6 +383,7 @@
             document.documentElement.classList.toggle('dark', isDark);
         })();
     </script>
-<script type="module" src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
+
 </html>

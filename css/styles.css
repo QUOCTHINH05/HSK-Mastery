@@ -125,7 +125,9 @@ html.dark .glass {
 }
 
 html.dark .hero-gradient {
-    background: linear-gradient(135deg, #0b3a7a 0%, #0a4bb5 35%, #1f6feb 70%, #2b8cff 100%) !important;
+    /* Match landing-nav dark background for consistency */
+    background: rgba(2, 6, 23, 0.65) !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18) !important;
 }
 
 html.dark .landing-mesh {
@@ -207,8 +209,82 @@ html.dark .border-slate-200\/80 {
     border-color: rgba(148, 163, 184, 0.28) !important;
 }
 
+/* Improved contrast for header navigation tabs and quiz mode in dark theme */
+html.dark header.hero-gradient .nav-tab {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #dbeefe !important;
+    border-color: rgba(148,163,184,0.06) !important;
+}
+html.dark header.hero-gradient .nav-tab:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+/* When Tailwind utility sets bg-white on an active tab, override for strong contrast */
+html.dark header.hero-gradient .nav-tab.bg-white,
+html.dark header.hero-gradient .nav-tab.bg-white.text-blue-800 {
+    background: linear-gradient(180deg, rgba(18,52,86,0.95), rgba(24,82,150,0.95)) !important;
+    color: #e6f6ff !important;
+    box-shadow: 0 12px 30px -12px rgba(30,64,175,0.5) !important;
+    border-color: rgba(59,130,246,0.28) !important;
+}
+
+/* Quiz mode buttons */
+html.dark .quiz-mode {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(148,163,184,0.08);
+    color: #e6eefc;
+}
+/* Active quiz-mode variant when the app applies border-blue-500/bg-blue-50 */
+html.dark .quiz-mode.border-blue-500 {
+    background: linear-gradient(180deg, rgba(14,50,87,0.9), rgba(23,78,140,0.9)) !important;
+    color: #e8f6ff !important;
+    border-color: rgba(99,102,241,0.22) !important;
+    box-shadow: 0 10px 28px -14px rgba(37,99,235,0.45) !important;
+}
+
 
 /* Landing page */
+
+/* Sync Số từ và Giọng đọc styles with quiz-mode in dark theme */
+html.dark .count-option,
+html.dark .voice-option {
+    background: rgba(255,255,255,0.03) !important;
+    border-color: rgba(148,163,184,0.08) !important;
+    color: #e6eefc !important;
+}
+/* Active/selected variants (Tailwind applies border-blue-500 or bg-blue-50) */
+html.dark .count-option.border-blue-500,
+html.dark .count-option.bg-blue-50,
+html.dark .voice-option.border-blue-500,
+html.dark .voice-option.bg-blue-50 {
+    background: linear-gradient(180deg, rgba(14,50,87,0.92), rgba(23,78,140,0.92)) !important;
+    color: #e8f6ff !important;
+    border-color: rgba(99,102,241,0.24) !important;
+    box-shadow: 0 10px 28px -14px rgba(37,99,235,0.45) !important;
+}
+
+/* Adjust text inside voice-option to keep readable contrast */
+html.dark .voice-option .font-semibold,
+html.dark .voice-option .text-slate-900 {
+    color: #e6eefc !important;
+}
+
+/* Refine nav-tab contrast on blue header in dark mode */
+html.dark header.hero-gradient .nav-tab {
+    background: rgba(3,7,18,0.48) !important;
+    color: #cfe8ff !important;
+    border-color: rgba(148,163,184,0.12) !important;
+}
+html.dark header.hero-gradient .nav-tab:hover {
+    background: rgba(3,7,18,0.6) !important;
+}
+/* Active nav tab override (Tailwind sets bg-white/text-blue-800) */
+html.dark header.hero-gradient .nav-tab.bg-white,
+html.dark header.hero-gradient .nav-tab.bg-white.text-blue-800 {
+    background: linear-gradient(135deg, #0b3a7a 0%, #1f6feb 100%) !important;
+    color: #ffffff !important;
+    border-color: rgba(59,130,246,0.28) !important;
+    box-shadow: 0 12px 30px -12px rgba(30,64,175,0.52) !important;
+}
 .landing-mesh {
     background:
         radial-gradient(900px 500px at 80% -10%, rgba(96, 165, 250, 0.35), transparent 55%),

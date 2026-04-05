@@ -117,6 +117,34 @@
                 </section>
 
                 <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <h2 class="text-lg font-bold text-slate-900 mb-1">Kỷ lục cá nhân — {{ modeLabel }}</h2>
+                    <p class="text-sm text-slate-500 mt-1">Hiển thị kỷ lục tốt nhất cho mỗi số từ trong phiên, theo từng
+                        cấp HSK.</p>
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="text-left text-slate-600 text-xs">
+                                    <th class="px-3 py-2">Số từ</th>
+                                    <th class="px-3 py-2">HSK 1</th>
+                                    <th class="px-3 py-2">HSK 2</th>
+                                    <th class="px-3 py-2">HSK 3</th>
+                                    <th class="px-3 py-2">HSK 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="n in wordCountOptions" :key="`rec-${n}`" class="border-t border-slate-100">
+                                    <td class="px-3 py-2 font-medium">{{ n }}</td>
+                                    <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 1), n) }}</td>
+                                    <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 2), n) }}</td>
+                                    <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 3), n) }}</td>
+                                    <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 4), n) }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
                     <h2 class="text-lg font-bold text-slate-900 mb-1">Giọng đọc tiếng Trung</h2>
                     <div class="space-y-3 mt-4">
                         <label v-for="v in voiceOptions" :key="v.id"
@@ -246,6 +274,19 @@
                                 currentLevel }} · {{ modeLabel }}</div>
                             <div class="text-sm text-slate-500 truncate">Phiên {{ quizQueue.length }} từ · Câu {{
                                 quizIndex + 1 }} / {{ quizQueue.length }}</div>
+                            <div class="text-xs text-slate-400 mt-1 flex items-center justify-center gap-4">
+                                <div class="flex items-center gap-2"><i class="fa-regular fa-clock"></i>
+                                    <span class="font-medium">{{ formatTime(timerSeconds) }}</span>
+                                </div>
+                                <div v-if="getBestRecord(quizMode, quizQueue.length, currentLevel)"
+                                    class="flex items-center gap-2">
+                                    <i class="fa-solid fa-trophy text-amber-500"></i>
+                                    <span class="text-xs">Kỷ lục: {{ getBestRecord(quizMode, quizQueue.length,
+                                        currentLevel).correct }}/{{ quizQueue.length }} · {{
+                                        formatTime(getBestRecord(quizMode, quizQueue.length, currentLevel).time)
+                                        }}</span>
+                                </div>
+                            </div>
                         </div>
                         <!-- Nút bật/tắt hiển thị Pinyin -->
                         <button type="button" @click="toggleShowPinyin"
@@ -336,8 +377,12 @@
                                 <h3 class="font-bold text-slate-900">HSK {{ level }} <span
                                         class="text-sm text-slate-500 font-medium">({{ collections[level].length }}
                                         từ)</span></h3>
-                                <button v-if="collections[level].length" @click="clearCollection(level)"
-                                    class="text-xs text-rose-600 hover:text-rose-800 underline">Xóa cấp này</button>
+                                <div class="flex items-center gap-3">
+                                    <button v-if="collections[level].length" @click="startReview(level)"
+                                        class="text-sm text-blue-600 hover:text-blue-800 font-medium">Ôn tập</button>
+                                    <button v-if="collections[level].length" @click="clearCollection(level)"
+                                        class="text-xs text-rose-600 hover:text-rose-800 underline">Xóa cấp này</button>
+                                </div>
                             </div>
                             <div v-if="!collections[level].length" class="text-sm text-slate-400 py-3">Chưa có từ trong
                                 cấp này.</div>

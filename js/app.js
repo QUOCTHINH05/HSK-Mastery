@@ -13,6 +13,16 @@ function toggleShowPinyin() {
     localStorage.setItem(PINYIN_KEY, showPinyin.value);
 }
 
+const RECORDS_KEY = 'hsk_mastery_records_v1';
+
+function loadRecords() {
+    try {
+        return JSON.parse(localStorage.getItem(RECORDS_KEY) || '{}') || {};
+    } catch (e) {
+        return {};
+    }
+}
+
 function normalizeCollections(raw) {
     const empty = { 1: [], 2: [], 3: [], 4: [] };
     if (!raw) return empty;
@@ -41,6 +51,14 @@ createApp({
         const quizMode = ref('cn-vi');
 
         const collections = ref(normalizeCollections(JSON.parse(localStorage.getItem(NB_KEY) || 'null')));
+
+        const records = ref(loadRecords());
+
+        const timerSeconds = ref(0);
+        let timerInterval = null;
+        const timerRunning = ref(false);
+
+        const sessionCorrectCount = ref(0);
 
         const currentLevel = ref(1);
         const quizQueue = ref([]);
@@ -107,6 +125,54 @@ createApp({
 
         const getWordCount = (lvl) => wordsByLevel.value[lvl]?.length || 0;
 
+        const formatTime = (s) => {
+            const mm = String(Math.floor(s / 60)).padStart(2, '0');
+            const ss = String(s % 60).padStart(2, '0');
+            return `${mm}:${ss}`;
+        };
+
+        const recordLabel = (rec, size) => {
+            if (!rec) return '—';
+            return `${rec.correct}/${size} · ${formatTime(rec.time)}`;
+        };
+
+        const getRecordKey = (mode, size, level) => `${mode}::${size}::${level}`;
+
+        const getBestRecord = (mode, size, level) => {
+            const key = getRecordKey(mode, size, level);
+            return records.value[key] || null;
+        };
+
+        const persistRecords = () => localStorage.setItem(RECORDS_KEY, JSON.stringify(records.value));
+
+        const startTimer = () => {
+            stopTimer();
+            timerSeconds.value = 0;
+            timerRunning.value = true;
+            timerInterval = setInterval(() => timerSeconds.value += 1, 1000);
+        };
+
+        const stopTimer = () => {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+            timerRunning.value = false;
+        };
+
+        const saveRecordIfBetter = (mode, size, level, correct, timeSec) => {
+            const key = getRecordKey(mode, size, level);
+            const prev = records.value[key];
+            const now = new Date().toISOString();
+            // Better if more correct, or equal correct but faster time
+            if (!prev || correct > prev.correct || (correct === prev.correct && timeSec < prev.time)) {
+                records.value[key] = { correct, time: timeSec, date: now };
+                persistRecords();
+                return true;
+            }
+            return false;
+        };
+
         const showToast = (msg) => {
             const toast = document.getElementById('toast');
             if (!toast) return;
@@ -160,6 +226,8 @@ createApp({
             currentLevel.value = lvl;
             quizQueue.value = [...words].sort(() => Math.random() - 0.5).slice(0, target);
             quizIndex.value = 0;
+            sessionCorrectCount.value = 0;
+            startTimer();
             generateOptions();
             showView('quiz');
             if (target < sessionWordCount.value) {
@@ -208,6 +276,7 @@ createApp({
             wasLastCorrect.value = ok;
             if (ok) {
                 playEffect('right');
+                sessionCorrectCount.value += 1;
                 setTimeout(() => {speak(currentQuestion.value.word);
                 }, 1000);
             }
@@ -226,13 +295,22 @@ createApp({
                 quizIndex.value += 1;
                 generateOptions();
             } else {
-                showToast('Hoàn thành bài — giỏi lắm!');
+                // finalize session: stop timer, save record if better, then go back to dashboard
+                stopTimer();
+                const total = quizQueue.value.length;
+                const correct = sessionCorrectCount.value;
+                const timeSec = timerSeconds.value;
+                const isNew = saveRecordIfBetter(quizMode.value, total, currentLevel.value, correct, timeSec);
+                showToast(`Hoàn thành — ${correct}/${total} · ${formatTime(timeSec)}${isNew ? ' — Kỷ lục mới!' : ''}`);
                 showView('dashboard');
             }
         };
 
         const exitQuiz = () => {
-            if (confirm('Thoát bài làm hiện tại?')) showView('dashboard');
+            if (confirm('Thoát bài làm hiện tại?')) {
+                stopTimer();
+                showView('dashboard');
+            }
         };
 
         const removeFromCollection = (level, index) => {
@@ -245,6 +323,21 @@ createApp({
             }
         };
 
+        const startReview = (lvl) => {
+            const coll = collections.value[lvl] || [];
+            if (!coll.length) {
+                showToast(`Không có từ trong collections HSK ${lvl} để ôn tập.`);
+                return;
+            }
+            currentLevel.value = lvl;
+            // Use the collection words as the review queue (shuffle)
+            quizQueue.value = [...coll].sort(() => Math.random() - 0.5);
+            quizIndex.value = 0;
+            sessionCorrectCount.value = 0;
+            startTimer();
+            generateOptions();
+            showView('quiz');
+        };
         const clearAllCollections = () => {
             if (!confirm('Xóa toàn bộ collections của tất cả cấp độ?')) return;
             for (const level of HSK_LEVELS) collections.value[level] = [];
@@ -324,6 +417,7 @@ createApp({
             selectDictLevel,
             selectDictPage,
             startLevel,
+            startReview,
             checkAnswer,
             isCorrect,
             getOptionClass,
@@ -344,6 +438,13 @@ createApp({
             HSK_LEVELS,
             showPinyin,
             toggleShowPinyin,
+            timerSeconds,
+            formatTime,
+            recordLabel,
+            getBestRecord,
+            sessionCorrectCount,
+            timerRunning,
+            records,
         };
     },
 }).mount('#app');

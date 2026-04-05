@@ -10,7 +10,7 @@
 * [📂 Cấu trúc thư mục](#-cấu-trúc-thư-mục)
 * [🚀 Hướng dẫn cài đặt cục bộ](#-hướng-dẫn-cài-đặt-cục-bộ)
 * [📊 Nguồn dữ liệu](#-nguồn-dữ-liệu)
-* [📄 Giấy phép](#-giấy-phép)
+* [🤝 Đóng góp](#-đóng-góp)
 
 ---
 
@@ -65,7 +65,7 @@ Dự án được xây dựng với kiến trúc nhẹ nhàng, tập trung vào 
 
 1.  **Clone repository:**
     ```bash
-    git clone [https://github.com/QUOCTHINH05/hsk-mastery.git](https://github.com/QUOCTHINH05/hsk-mastery.git)
+    git clone https://github.com/QUOCTHINH05/hsk-mastery.git
     ```
 
 2.  **Di chuyển vào thư mục dự án:**

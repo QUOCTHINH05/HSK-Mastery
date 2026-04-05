@@ -143,10 +143,10 @@
                             <tr v-for="(w, idx) in dictVisibleWords" :key="`dict-${w.level}-${w.word}-${idx}`" class="border-b border-slate-100 hover:bg-blue-50/40 text-sm">
                                 <td class="px-3 py-3 text-slate-500">{{ (dictPage - 1) * 100 + idx + 1 }}</td>
                                 <td class="px-3 py-3 cn-font text-xl font-bold text-slate-900">{{ w.word }}</td>
-                                <td class="px-3 py-3 text-blue-700">{{ w.pinyin }}</td>
+                                <td class="px-3 py-3 text-slate-700">{{ w.pinyin }}</td>
                                 <td class="px-3 py-3 text-slate-600">{{ w.partOfSpeech || '—' }}</td>
                                 <td class="px-3 py-3 text-slate-700">{{ w.meaning }}</td>
-                                <td class="px-3 py-3 text-slate-500">{{ w.english }}</td>
+                                <td class="px-3 py-3 text-slate-600">{{ w.english }}</td>
                                 <td class="px-3 py-3 text-center"><button @click="speak(w.word)" class="p-2 rounded-lg hover:bg-blue-100 text-blue-700"><i class="fa-solid fa-volume-high"></i></button></td>
                                 <td class="px-3 py-3 text-center"><button @click="addToCollection(w)" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700 hover:bg-rose-100 font-semibold"><i class="fa-solid fa-bookmark mr-1"></i>Thêm</button></td>
                             </tr>

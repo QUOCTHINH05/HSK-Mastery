@@ -47,7 +47,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 46,生活,shēnghuó,"Danh từ, Động từ",SINH HOẠT,"cuộc sống, sinh sống, sống",Life,生活,TRUE,两个人一起生活，一定有很多问题。,"Khi hai người sống chung với nhau, chắc chắn sẽ nảy sinh nhiều vấn đề."
 47,浪漫,làngmàn,Tính từ,LÃNG MẠN,lãng mạn,romantic,浪漫,TRUE,和爱人在海边走走是个很浪漫的事情。,Đi dạo trên bãi biển cùng người yêu là một điều rất lãng mạn.
 48,够,gòu,"Động từ, Tính từ, Phó từ",CẤU,"(v): đủ; với, với tới; (adj): đủ; (adv): đủ, thật là (thể hiện mức độ cao)",enough,够,TRUE,你带的钱够不够？,Bạn có đủ tiền không?
-49,缺点,quēdiǎn,Danh từ,KHUYẾT ĐIỂM,"khuyết điểm, điểm yếu, thiếu sót",shortcoming,缺点,TRUE,每个人都有自己的缺点，更重要的是改变自己的缺点成优点。,"Ai cũng có những điểm yếu riêng, nhưng điều quan trọng hơn là biến những điểm yếu đó thành điểm mạnh."
+49,缺点,quēdiǎn,Danh từ,KHUYẾT ĐIỂM,"khuyết điểm, điểm yếu, thiếu sót",shortcoming,缺点,TRUE,每个人都有自己的缺点，更重要的是改变自己的缺点成优点。,"Ai cũng có những điểm yếu riêng, nhưng điều quan trọng hơn cả là biến những điểm yếu đó thành điểm mạnh."
 50,优点,yōudiǎn,Danh từ,ƯU ĐIỂM,"ưu điểm, điểm mạnh",advantage,优点,TRUE,我的优点是我会做菜。,Điểm mạnh của tôi là tôi biết nấu ăn.
 51,接受,jiēshòu,Động từ,TIẾP THỤ,"chấp nhận, tiếp thu, tiếp nhận",accept,接受,TRUE,只有接受对方的性格，你们俩才能更好地一起生活。,"Chỉ khi chấp nhận tính cách của nhau, hai người mới có thể sống chung với nhau tốt hơn."
 52,羡慕,xiànmù,Động từ,TIỆN MỘ,"ngưỡng mộ, hâm mộ",envious,羡慕,TRUE,不用羡慕别人的生活，只要好好走自己选择的路就好了。,"Không cần phải ngưỡng mộ cuộc sống của người khác, chỉ cần đi đúng con đường mà bản thân lựa chọn là được rồi."
@@ -125,7 +125,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 124,接着,jiēzhe,Phó từ,TIẾP TRƯỚC,"tiếp theo, ngay sau đó (sự tiếp nối hành động ngay sau đó)",then,接着,TRUE,我每天早上都会先锻炼一会儿，接着吃早饭。,Tôi tập thể dục một lúc mỗi sáng trước khi ăn sáng.
 125,想法,xiǎngfǎ,"Danh từ, Động từ",TƯỞNG PHÁP,"cách nghĩ, ý nghĩ, suy nghĩ, quan điểm; tìm cách, nghĩ cách",idea,想法,TRUE,我的想法跟你的是不一样。,Cách nghĩ của tôi khác với bạn.
 126,理解,lǐjiě,Động từ,LÝ GIẢI,"hiểu, nắm rõ, thấu hiểu; thông cảm",understand,理解,TRUE,两个人在一起，需要互相理解和接受对方的缺点和优点。,"Khi hai người ở bên nhau, họ cần hiểu và chấp nhận những điểm yếu và điểm mạnh của nhau."
-127,一生,yīshēng,Danh từ,NHẤT SINH,"cả đời, một đời, trọn đời, suốt đời",lifetime,一生,TRUE,我们的一生中会遇到一件非常重要的事情，那就是结婚。,Một trong những sự kiện quan trọng nhất mà chúng ta sẽ trải qua trong đời là hôn nhân.
+127,一生,yīshēng,Danh từ,NHẤT SINH,"cả đời, một đời, trọn đời, suốt đời",lifetime,一生,TRUE,我们的一生中会遇到一件非常重要的事情，那就是结婚。,Một trong những sự kiện quan trọng nhất trong cuộc đời chúng ta là hôn nhân.
 128,互相理解,hùxiānglǐjiě,Cụm từ,HỖ TƯƠNG LÝ GIẢI,thấu hiểu lẫn nhau,Mutual understanding,互相理解,TRUE,结婚更需要两个人互相理解和接受。不仅要接受对方的优点，而且要接受缺点。,Hôn nhân đòi hỏi sự thấu hiểu và chấp nhận lẫn nhau từ cả hai phía. Điều đó có nghĩa là chấp nhận không chỉ điểm mạnh mà cả điểm yếu của đối phương.
 129,互相关心,hùxiāngguānxīn,Cụm từ,HỖ TƯƠNG QUAN TÂM,quan tâm lẫn nhau,care for each other,互相关心,TRUE,爱情不仅需要浪漫，而且跟需要互相关心。,Tình yêu không chỉ cần sự lãng mạn mà còn cần sự quan tâm lẫn nhau.
 130,出生,chūshēng,Động từ,XUẤT SINH,"sinh ra, ra đời, chào đời",born,出生,TRUE,每个人一出生就跟家人一起生活。,Ai cũng sống cùng gia đình từ khi sinh ra.
@@ -156,7 +156,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 154,尽管,jǐnguǎn,"Phó từ, Liên từ",TẪN QUẢN,"(phó): cứ, cứ việc, thoải mái; (liên): cho dù, mặc dù, dù rằng",although,尽管,TRUE,尽管很多年没见，我们还是好朋友。,"Mặc dù đã nhiều năm không gặp nhau, chúng ta vẫn là bạn tốt."
 155,真正,zhēnzhèng,"Tính từ, Phó từ",CHÂN CHÍNH,"chân chính, thật sự, đích thực, chính hiệu; thực sự",real,真正,TRUE,你遇到困难的时候，真正的朋友总是在你身边帮你想想解决办法。,"Khi bạn gặp khó khăn, những người bạn chân thành luôn ở bên cạnh bạn, giúp bạn tìm ra giải pháp."
 156,友谊,yǒuyì,Danh từ,HỮU NGHỊ,tình bạn， 一段友谊: một tình bạn (lượng từ cho 友谊 là 段),friendship,友谊,TRUE,我们之间的友谊很深厚。,Tình bạn của chúng tôi rất sâu đậm.
-157,丰富,fēngfù,"Động từ, Tính từ",PHONG PHÚ,làm phong phú; phong phú,Rich,丰富,TRUE,朋友可以丰富我们的生活。看书可以丰富我们的知识。,Bạn bè có thể làm phong phú thêm cuộc sống của chúng ta. Đọc sách có thể làm giàu thêm kiến ​​thức của chúng ta.
+157,丰富,fēngfù,"Động từ, Tính từ",PHONG PHÚ,làm phong phú; phong phú,Rich,丰富,TRUE,朋友可以丰富我们的生活。看书可以丰富我们的知识。,Bạn bè có thể làm cho cuộc sống của chúng ta thêm phong phú. Đọc sách có thể làm giàu thêm kiến ​​thức của chúng ta.
 158,无聊,wúliáo,Tính từ,VÔ LIÊU,"vô vị, nhàm chán, buồn chán, tẻ nhạt",boring,无聊,TRUE,离开朋友，我们的生活一定会非常无聊。,Cuộc sống của chúng ta sẽ vô cùng nhàm chán nếu thiếu bạn bè.
 159,讨厌,tǎoyàn,"Động từ, Tính từ",THẢO YẾM,ghét; đáng ghét,Hate,讨厌,TRUE,我讨厌交流一个容易生气的人。,Tôi ghét phải giao tiếp với người dễ nổi nóng.
 160,却,què,Phó từ,KHƯỚC,"lại, nhưng mà, nhưng lại, mà lại",but,却,TRUE,她做的菜平时不太好吃，但是这次却很好吃。,"Món ăn cô ấy nấu bình thường không ngon lắm, nhưng lần này lại rất ngon."
@@ -214,7 +214,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 212,邮局,yóujú,Danh từ,BƯU CỤC,"bưu điện, bưu cục",post office,邮局,TRUE,这儿附近有没有邮局吗？,Gần đây có bưu điện không?
 213,误会,wùhuì,"Động từ, Danh từ",NGỘ HỘI,hiểu lầm; sự hiểu lầm,Misunderstand,误会,TRUE,你别误会，我们只是朋友。这件事只是误会的。,"Đừng hiểu lầm, chúng ta chỉ là bạn bè thôi. Tất cả chỉ là hiểu lầm."
 214,回忆,huíyì,"Động từ, Danh từ",HỒI ỨC,"hồi tưởng, nhớ lại; kỷ niệm, hồi ức, ký ức",remember,回忆,TRUE,这些照片带给我过去美好的回忆。这首歌让我回忆起年轻的时候。,Những bức ảnh này gợi lại cho tôi những kỷ niệm đẹp trong quá khứ. Bài hát này làm tôi nhớ lại về tuổi thanh xuân.
-215,距离,jùlí,"Danh từ, Động từ",CỰ LY,"cự ly, khoảng cách, sự khác biệt; cách, cách khoảng",distance,距离,TRUE,这里距离北京五十公里。他的看法和你的有距离。,Nơi này cách Bắc Kinh 50 ki-lô-mét. Quan điểm của ông ấy khác với quan điểm của bạn.
+215,距离,jùlí,"Danh từ, Động từ",CỰ LY,"cự ly, khoảng cách, sự khác biệt; cách, cách khoảng",distance,距离,TRUE,这里距离北京五十公里。他的看法和你的有距离。,Nơi này cách Bắc Kinh 50 km. Quan điểm của ông ấy khác với quan điểm của bạn.
 216,拉,lā,Động từ,LẠP,"lôi, kéo",pull,拉,TRUE,拉行李箱的人是我的哥哥。,Người đang kéo vali là anh trai tôi.
 217,拉近距离,lājìn jùlí,Động từ ly hợp,LẠP CẬN CỰ LY,kéo gần khoảng cách,Close the distance,拉近距离,TRUE,手机可以拉近人和人的距离。,Điện thoại di động có thể giúp mọi người xích lại gần nhau hơn.
 218,咱们,zánmen,Đại từ,CHA MÔN,"chúng mình, bọn mình, chúng ta (bao gồm cả người nói và người nghe)",we,咱们,TRUE,今天下午咱们一起去踢足球吧。,Chiều nay chúng ta cùng đi đá bóng nhé.
@@ -264,7 +264,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 262,在家靠父母，出门靠朋友,zàijiā kào fùmǔ ， chūmén kào péngyou,Thành ngữ,"TẠI GIA KHÁO PHỤ MẪU, XUẤT MÔN KHÁO BẰNG HỮU",nhấn mạnh sự quan trọng của việc kết giao bạn bè,"At home, you rely on your parents; when you're out, you rely on your friends.",在家靠父母，出门靠朋友,TRUE,在家靠父母，出门靠朋友。,"Ở nhà dựa cha mẹ, ra ngoài nhờ bạn bè."
 263,所有,suǒyǒu,"Động từ, Danh từ, Tính từ",SỞ HỮU,"sở hữu, có được; tất cả, toàn bộ",all,所有,TRUE,所有的人都只能生活一次，所以我们得幸福地生活。,"Ai cũng chỉ sống một lần, vì vậy chúng ta phải sống hạnh phúc."
 264,消息,xiāoxi,Danh từ,TIÊU TỨC,"tin, tin tức",information,消息,TRUE,我并没有听过这个消息。,Tôi chưa từng nghe qua tin tức này.
-265,完全,wánquán,Phó từ,HOÀN TOÀN,hoàn toàn,completely,完全,TRUE,我来中国快两年了，但是我并不觉得自己完全习惯这里的生活。,"Tôi đã ở Trung Quốc gần hai năm rồi, nhưng tôi vẫn cảm thấy mình chưa hoàn toàn thích nghi với cuộc sống ở đây."
+265,完全,wánquán,Phó từ,HOÀN TOÀN,hoàn toàn,completely,完全,TRUE,我来中国快两年了，但是我并不觉得自己完全习惯这里的生活。,"Tôi đã ở Trung Quốc gần hai năm rồi, nhưng tôi vẫn chưa cảm thấy mình hoàn toàn thích nghi được với cuộc sống ở đây."
 266,修,xiū,Động từ,TU,"sửa chữa, sửa",build,修,TRUE,我的自行车被弟弟弄坏了。爸爸终于来帮我把它修好了。,Xe đạp của tôi bị em trai làm hỏng rồi. Cuối cùng bố cũng đến giúp tôi sửa lại nó.
 267,脏,zāng,Tính từ,TANG,"dơ, bẩn, bẩn thỉu ",dirty,脏,TRUE,我不小心把她的衣服弄脏了。,Tôi không cẩn thận làm bẩn quần áo của cô ấy rồi.
 268,态度,tàidu,Danh từ,THÁI ĐỘ,thái độ,manner,态度,TRUE,态度比程度重要。,Thái độ quan trọng hơn trình độ.
@@ -297,7 +297,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 295,烦恼,fánnǎo,Tính từ,PHIỀN NÃO,"phiền não, phiền muộn, buồn phiền",trouble,烦恼,TRUE,遇到烦恼时，我经常听音乐，这样帮我王难过的事情。,"Khi gặp phiền muộn, tôi thường nghe nhạc, điều này giúp tôi quên đi chuyện buồn."
 296,肯定,kěndìng,"Động từ, Tính từ, Phó từ",KHẲNG ĐỊNH,"(sự) khẳng định, (sự) công nhận; xác định, rõ ràng; chấp nhận, tán thành; chắc chắn, nhất định",affim,肯定,TRUE,爸妈应该肯定孩子的成绩，让他们感觉骄傲。,Cha mẹ nên ghi nhận những thành tích của con cái và làm cho chúng cảm thấy tự hào.
 297,养,yǎng,Động từ,DƯỠNG,"nuôi, nuôi dưỡng",keep,养,TRUE,我家养了一只小猫，它的毛白白的，特别可爱。,Gia đình tôi có một chú mèo con lông trắng; nó rất dễ thương.
-298,柔软,róuruǎn,Tính từ,NHU NHUYỄN,mềm mại,soft,柔软,TRUE,我家小猫的毛很柔软。,Bộ lông của mèo con nhà tôi rất mềm mại.
+298,柔软,róuruǎn,Tính từ,NHU NHUYỄN,mềm mại,soft,柔软,TRUE,我家小猫的毛很柔软。,Con mèo con của tôi có bộ lông rất mềm mại.
 299,迎接,yíngjiē,Động từ,NGHÊNH TIẾP,"nghênh đón, đón chào, đón tiếp",meet,迎接,TRUE,每次我回到家，它都站在门口迎接我。,"Mỗi lần tôi về nhà, nó đều đứng ở cửa chào đón tôi."
 300,发展,fāzhǎn,Động từ,PHÁT TRIỂN,phát triển,develop,发展,TRUE,我们国家现需要发展教育。,Đất nước chúng ta hiện cần phát triển giáo dục.
 301,动力,dònglì,Danh từ,ĐỘNG LỰC,động lực,power,动力,TRUE,文化又是目标，又是发展经济和社会的动力。,Văn hóa vừa là mục tiêu vừa là động lực thúc đẩy sự phát triển kinh tế và xã hội.
@@ -372,12 +372,12 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 370,者,zhě,Đại từ,GIẢ,"người, kẻ, cái (chỉ người, vật)",The,者,TRUE,这位面试者很帅。,Người được phỏng vấn này rất đẹp trai.
 371,感觉,gǎnjué,"Danh từ, Động từ",CẢM GIÁC,"cảm giác, cảm thấy",Feel,感觉,TRUE,你感觉他是怎么样的人？,Bạn nghĩ anh ta là người như thế nào?
 372,判断,pànduàn,"Danh từ, Động từ",PHÁN ĐOÁN,"phán đoán, nhận xét, đánh giá",judge,判断,TRUE,通过别人的意见，你对一个问题的判断可以不正确。,"Dựa trên ý kiến ​​của người khác, nhận định của bạn về một vấn đề nào đó có thể không chính xác."
-373,顾客,gùkè,Danh từ,CỐ KHÁCH,khách hàng,customer,顾客,TRUE,今天有几位老顾客来我们商店购物。,"Hôm nay, một số khách hàng quen thuộc đã đến cửa hàng của chúng tôi để mua sắm."
+373,顾客,gùkè,Danh từ,CỐ KHÁCH,khách hàng,customer,顾客,TRUE,今天有几位老顾客来我们商店购物。,"Hôm nay, một số khách hàng quen thuộc đã đến cửa hàng chúng tôi mua sắm."
 374,准时,zhǔnshí,Tính từ,CHUẨN THÌ,đúng giờ,on time,准时,TRUE,不管是上课，上班还是与别人约会，准时都非常重要。,"Dù là đi học, đi làm hay đi hẹn hò, đúng giờ luôn rất quan trọng."
 375,不管,bùguǎn,Liên từ,BẤT QUẢN,"bất kể, bất luận, cho dù là (Diễn tả ý trong bất kỳ điều kiện hoặc hoàn cảnh nào thì kết quả hoặc kết luận đều không đổi, thường dùng trong văn nói)",in spite of,不管,TRUE,不管忙不忙，他每天都要锻炼一个小时身体。,"Dù bận rộn đến đâu, anh ấy vẫn dành một giờ mỗi ngày để tập thể dục."
 376,无论,wúlùn,Liên từ,VÔ LUẬN,"bất kể, bất luận, cho dù là (Diễn tả ý trong bất kỳ điều kiện hoặc hoàn cảnh nào thì kết quả hoặc kết luận đều không đổi, thường dùng trong văn viết trang trọng)",regardless,无论,TRUE,无论以后发生什么事情，快乐还是难过的，我都会陪在你身边，跟你一起分享幸福，分担烦恼，解决难题。,"Dù tương lai có chuyện gì xảy ra, dù là hạnh phúc hay buồn phiền, tôi vẫn sẽ luôn bên cạnh bạn, cùng chia sẻ niềm vui, cùng chia sẻ nỗi lo và cùng nhau giải quyết khó khăn."
 377,温度,wēndù,Danh từ,ÔN ĐỘ,nhiệt độ,temperature,温度,TRUE,秋天来了，温度开始降低了。,"Mùa thu đã đến, và nhiệt độ bắt đầu giảm."
-378,一切,yīqiè,Đại từ,NHẤT THIẾT,"mọi, toàn bộ, tất cả",everything,一切,TRUE,我相信一切会好起来。,Tôi tin mọi chuyện rồi sẽ ổn thôi.
+378,一切,yīqiè,Đại từ,NHẤT THIẾT,"mọi, toàn bộ, tất cả",everything,一切,TRUE,我相信一切会好起来。,Tôi tin rằng mọi chuyện sẽ ổn thôi.
 379,小伙子,xiǎohuǒzi,Danh từ,TIỂU HỎA TỬ,"cậu nhóc, chàng trai, cậu thanh niên, chàng trai trẻ",young man,小伙子,TRUE,这位小伙子虽然很年轻，但是工作经验很丰富。,"Mặc dù còn rất trẻ, chàng trai này lại có rất nhiều kinh nghiệm làm việc."
 380,条件,tiáojiàn,Danh từ,ĐIỀU KIỆN,điều kiện,condition,条件,TRUE,参加这次足球比赛有什么条件吗？,Cần những điều kiện gì để tham gia giải đấu bóng đá này?
 381,要求,yāoqiú,Danh từ,YÊU CẦU,yêu cầu,Require,要求,TRUE,我们公司的要求很简单，如果你有最少两年的工作经验就被接受了。,Yêu cầu của công ty chúng tôi rất đơn giản: bạn sẽ được nhận nếu có ít nhất hai năm kinh nghiệm làm việc.
@@ -387,7 +387,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 385,穷,qióng,Tính từ,TÚNG,nghèo,poverty,穷,TRUE,现代的女生肯定不选择跟一个穷的男生在一起。,Con gái hiện đại chắc chắn sẽ không chọn ở bên một chàng trai nghèo.
 386,富,fù,Tính từ,PHÚ,giàu,rich,富,TRUE,你们认为怎么才能叫富吗？,Bạn nghĩ như thế nào mới được gọi là giàu có?
 387,最终,zuìzhōng,Danh từ,TỐI CHUNG,"cuối cùng, sau cùng",final,最终,TRUE,我最终找到适合我的人了。,Cuối cùng tôi đã tìm được người phù hợp với mình.
-388,金钱,jīnqián,Danh từ,KIM TIỀN,"tiền, tiền bạc",money,金钱,TRUE,在现代的社会中，金钱是非常重要的，但是却不是最重要的。因为有些东西金钱不能买到，那就是：健康，友谊，美好的回忆，感情等等。,"Trong xã hội hiện đại, tiền bạc rất quan trọng, nhưng không phải là điều quan trọng nhất. Bởi vì có những thứ tiền không mua được: sức khỏe, tình bạn, những kỷ niệm đẹp và tình cảm, cùng nhiều thứ khác nữa."
+388,金钱,jīnqián,Danh từ,KIM TIỀN,"tiền, tiền bạc",money,金钱,TRUE,在现代的社会中，金钱是非常重要的，但是却不是最重要的。因为有些东西金钱不能买到，那就是：健康，友谊，美好的回忆，感情等等。,"Trong xã hội hiện đại, tiền bạc rất quan trọng, nhưng không phải là điều quan trọng nhất. Bởi vì có những thứ tiền không mua được, như sức khỏe, tình bạn, những kỷ niệm đẹp và tình cảm."
 389,食物,shíwù,Danh từ,THỰC VẬT,"thức ăn, thực phẩm, đồ ăn",food,食物,TRUE,这里的食物有丰富又好吃。,Đồ ăn ở đây rất nhiều và ngon.
 390,古代,gǔdài,Danh từ,CỔ ĐẠI,"cổ đại, thời cổ, thời xưa",Ancient,古代,TRUE,古代的人经常住在哪里？,Người xưa thường sinh sống ở đâu?
 391,现代,xiàndài,"Danh từ, Tính từ",HIỆN ĐẠI,"hiện đại, thời hiện đại",modern,现代,TRUE,社会越现代，人们的意识和文化越提高。,"Xã hội càng hiện đại hóa, nhận thức và trình độ văn hóa của người dân càng được nâng cao."
@@ -402,7 +402,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 400,广告,guǎnggào,"Danh từ, Động từ",QUẢNG CÁO,quảng cáo,advertise,广告,TRUE,这个广告的内容虽然很简单，但是很吸引看客。,"Mặc dù nội dung quảng cáo này rất đơn giản, nhưng nó lại rất thu hút người xem."
 401,寄,jì,Động từ,KÝ,"gửi, gởi, chuyển đi",send,寄,TRUE,他每个月都给儿子寄钱。,Ông ấy gửi tiền cho con trai mình mỗi tháng.
 402,家具,jiājù,Danh từ,GIA CỤ,"nội thất, đồ gia dụng",furniture,家具,TRUE,这家商店的家具质量很好，而且也不贵。,Đồ nội thất trong cửa hàng này có chất lượng tốt và giá cả phải chăng.
-403,玩具,wánjù,Danh từ,NGOẠN CỤ,"đồ chơi, đồ chơi trẻ em",Toy,玩具,TRUE,我今天上午去了商店给我孩子买了几个玩具。,Sáng nay tôi đã đi đến cửa hàng và mua một số đồ chơi cho con tôi.
+403,玩具,wánjù,Danh từ,NGOẠN CỤ,"đồ chơi, đồ chơi trẻ em",Toy,玩具,TRUE,我今天上午去了商店给我孩子买了几个玩具。,Sáng nay tôi đã đến cửa hàng và mua một vài món đồ chơi cho con tôi.
 404,价格,jiàgé,Danh từ,GIÁ CÁCH,"giá, giá cả",price,价格,TRUE,去买东西时，首先每个人都关心的是价格。,"Khi mua sắm, điều đầu tiên mọi người quan tâm là giá cả."
 405,零钱,língqián,Danh từ,LINH TIỀN,tiền lẻ,small change,零钱,TRUE,弟弟用零钱买了一个面包。,Em trai tôi đã dùng tiền lẻ mua một ổ bánh mì.
 406,毛巾,máojīn,Danh từ,MAO CÂN,"khăn, khăn mặt",towel,毛巾,TRUE,我用毛巾洗脸。,Tôi rửa mặt bằng khăn.
@@ -414,7 +414,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 412,大使馆,dàshǐguǎn,Danh từ,ĐẠI SỨ QUÁN,đại sứ quán,embassy,大使馆,TRUE,明天我要去美国大使馆办签证。,Ngày mai tôi sẽ đến đại sứ quán Mỹ để xin visa.
 413,逛街,guàngjiē,Động từ,CUỐNG NHAI,"dạo phố, mua sắm, đi shopping",shop,逛街,TRUE,周末我们常常逛街。,Chúng tôi thường đi mua sắm vào cuối tuần.
 414,小吃,xiǎochī,Danh từ,TIỂU CẬT,đồ ăn vặt,snack,小吃,TRUE,逛超市的时候，我买了很多小吃。,Tôi đã mua rất nhiều đồ ăn vặt khi đi siêu thị.
-415,气候,qìhòu,Danh từ,KHÍ HẬU,khí hậu,climate,气候,TRUE,气候变化对我们的生活有很大的影响。气候变化为我们周围的环境带来很多严重的后果。克服那些后果是不容易的，需要每个人的努力坚持。,Biến đổi khí hậu có tác động sâu sắc đến cuộc sống của chúng ta. Nó mang lại nhiều hậu quả nghiêm trọng cho môi trường. Khắc phục những hậu quả đó không dễ dàng và đòi hỏi nỗ lực bền bỉ của tất cả mọi người.
+415,气候,qìhòu,Danh từ,KHÍ HẬU,khí hậu,climate,气候,TRUE,气候变化对我们的生活有很大的影响。气候变化为我们周围的环境带来很多严重的后果。克服那些后果是不容易的，需要每个人的努力坚持。,Biến đổi khí hậu có tác động đáng kể đến cuộc sống của chúng ta. Nó mang lại nhiều hậu quả nghiêm trọng cho môi trường. Khắc phục những hậu quả đó không dễ dàng và đòi hỏi nỗ lực bền bỉ của tất cả mọi người.
 416,寒假,hánjià,Danh từ,HÀN GIÁ,kỳ nghỉ đông,winter vacation,寒假,TRUE,你寒假有什么打算吗？,Bạn có kế hoạch gì cho kỳ nghỉ đông?
 417,暑假,shǔjià,Danh từ,THỬ GIÁ,kỳ nghỉ hè,summer vacation,暑假,TRUE,我打算暑假去爬山。,Tôi dự định đi leo núi vào kỳ nghỉ hè.
 418,旅行,lǚxíng,"Động từ, Danh từ",LỮ HÀNH,"(chuyến) du lịch, chỉ chuyến đi có kế hoạch cụ thể, mang tính cá nhân và có mục đích rõ ràng",travel,旅行,TRUE,旅行是人们生活中不能缺少的一部分。,Du lịch là một phần không thể thiếu trong cuộc sống của con người.
@@ -443,7 +443,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 441,复杂,fùzá,Tính từ,PHỤC TẠP,phức tạp,complex,复杂,TRUE,这件事情太复杂了，回头再说吧。,Vấn đề này quá phức tạp; chúng ta hãy bàn về nó sau.
 442,约,yuē,Động từ,ƯỚC,hẹn,about,约,TRUE,我想约朋友一起去看电影，但是她很忙，没有时间跟我去。,"Tôi muốn rủ một người bạn đi xem phim cùng, nhưng cô ấy bận quá và không có thời gian."
 443,后果,hòuguǒ,Danh từ,HẬU QUẢ,hậu quả,as a result of,后果,TRUE,我们应该克服这个问题的后果。,Chúng ta cần phải khắc phục hậu quả của vấn đề này.
-444,严重,yánzhòng,Tính từ,NGHIÊM TRỌNG,nghiêm trọng,serious,严重,TRUE,情况看起来越来越严重，我们应该多注意安全。,"Tình hình ngày càng trở nên nghiêm trọng, và chúng ta cần phải cẩn trọng hơn."
+444,严重,yánzhòng,Tính từ,NGHIÊM TRỌNG,nghiêm trọng,serious,严重,TRUE,情况看起来越来越严重，我们应该多注意安全。,Tình hình ngày càng trở nên nghiêm trọng; chúng ta cần phải cẩn trọng hơn.
 445,一般情况下,yībān qíngkuàng xià,Cụm từ,NHẤT BAN TÌNH HUỐNG HẠ,"Thông thường thì, Thường là, Trong điều kiện/tình hình thông thường thì,",Under normal circumstances,一般情况下,TRUE,一般情况下，这段路每天早上七点半会开始堵车。,"Thông thường, con đường này sẽ bị tắc nghẽn bắt đầu từ 7:30 sáng mỗi ngày."
 446,美丽,měilì,Tính từ,MỸ LỆ,"mỹ lệ, xinh đẹp, đẹp đẽ",beauty,美丽,TRUE,春天的景色很美丽，让人感觉很舒服。,Cảnh sắc mùa xuân rất đẹp và khiến người ta cảm thấy vô cùng dễ chịu.
 447,恐怕,kǒngpà,"Động từ, Phó từ",KHỦNG PHA,"sợ, sợ rằng; e rằng, chắc là, có lẽ (diễn tả sự lo lắng hoặc dự đoán không chắc chắn)",I am afraid,恐怕,TRUE,你穿得太少了，恐怕会感冒。,Bạn mặc không đủ ấm; có thể bạn sẽ bị cảm lạnh.
@@ -503,7 +503,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 501,网球,wǎngqiú,Danh từ,VÕNG CẦU,"tennis, quần vợt",tennis,网球,TRUE,我本来不喜欢网球，但是跟男朋友一起打了几个月，就喜欢上了。,"Lúc đầu tôi không thích tennis, nhưng sau khi chơi với bạn trai vài tháng, tôi bắt đầu thích môn thể thao này."
 502,日记,rìjì,Danh từ,NHẬT KÝ,nhật ký ,journal,日记,TRUE,我平时喜欢写日记，几乎每天睡觉前都会写一下。,"Tôi thường thích viết nhật ký, và hầu như đêm nào tôi cũng viết vài dòng trước khi đi ngủ."
 503,皮肤,pífū,Danh từ,BÌ PHU,"da, làn da; skin, trang phục (game); nông cạn, hạn hẹp",skin,皮肤,TRUE,冬天一来，我的皮肤就很干。,Da tôi trở nên rất khô khi mùa đông đến.
-504,散步,sànbù,Động từ ly hợp,TÁN BỘ,"đi bộ, đi dạo, tản bộ (散+thời gian+步: đi dạo trong bao lâu)",walk,散步,TRUE,我喜欢每天下午在我家附近的公园去散步，那里的空气不仅很新鲜，也很凉快。,Tôi thích đi dạo trong công viên gần nhà mỗi chiều; không khí ở đó không chỉ trong lành mà còn mát mẻ.
+504,散步,sànbù,Động từ ly hợp,TÁN BỘ,"đi bộ, đi dạo, tản bộ (散+thời gian+步: đi dạo trong bao lâu)",walk,散步,TRUE,我喜欢每天下午在我家附近的公园去散步，那里的空气不仅很新鲜，也很凉快。,Tôi thích đi dạo trong công viên gần nhà mỗi chiều. Không khí ở đó không chỉ trong lành mà còn mát mẻ.
 505,西红柿,xīhóngshì,Danh từ,TÂY HỒNG THỊ,"quả cà chua, cà chua",tomato,西红柿,TRUE,西红柿炒鸡蛋是一个很好吃的菜，也很容易做。,Cà chua xào trứng là một món ăn ngon và dễ làm.
 506,美白,měibái,Động từ,MỸ BẠCH,làm trắng da,Whitening,美白,TRUE,听说吃西红柿能美白皮肤。,Tôi nghe nói ăn cà chua có thể làm trắng da.
 507,养成,yǎngchéng,Động từ,DƯỠNG THÀNH,"nuôi dưỡng, hình thành, bồi dưỡng",Develop,养成,TRUE,他从小就养成读书的习惯。,Ông ấy đã hình thành thói quen đọc sách từ khi còn nhỏ.
@@ -517,7 +517,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 515,作者,zuòzhě,Danh từ,TÁC GIẢ,"tác giả, người viết",author,作者,TRUE,,
 516,躺,tǎng,Động từ,THẢNG,nằm,lie,躺,TRUE,他今天懒得起床，只想躺在床上，什么都不想干。," Hôm nay anh ấy lười chẳng muốn dậy, chỉ muốn nằm trên giường, chẳng muốn làm gì cả."
 517,阳光,yángguāng,"Danh từ, Tính từ",DƯƠNG QUANG,"ánh nắng, ánh sáng mặt trời; (adj): lạc quan, vui vẻ (miêu tả tính cách)",Sunlight,阳光,TRUE,小猫喜欢躺在阳光下睡觉。,Mèo con thích nằm phơi nắng và ngủ.
-518,沙发,shāfā,Danh từ,SA PHÁT,"ghế sofa, sô pha",sofa,沙发,TRUE,他今天累死了，一回家就躺在沙发上休息了。,Hôm nay anh ấy rất mệt và về đến nhà đã lập tức lên giường nằm nghỉ trên ghế sofa.
+518,沙发,shāfā,Danh từ,SA PHÁT,"ghế sofa, sô pha",sofa,沙发,TRUE,他今天累死了，一回家就躺在沙发上休息了。,Hôm nay anh ấy rất mệt và về đến nhà thì lập tức đi ngủ trên ghế sofa.
 519,梦想,mèngxiǎng,"Danh từ, Động từ",MỘNG TƯỞNG,"ước mơ, mong ước; ước muốn, mơ ước (=dream)",dream,梦想,TRUE,他的梦想是成为一名作家。,Ước mơ của anh ấy là trở thành một nhà văn.
 520,王子,wángzǐ,Danh từ,VƯƠNG TỬ,hoàng tử,prince,王子,TRUE,白马王子又帅又聪明。,Bạch mã Hoàng tử vừa đẹp trai vừa thông minh.
 521,公主,gōngzhǔ,Danh từ,CÔNG CHỦ,công chúa,Princess,公主,TRUE,白雪公主的皮肤白白的。,Công chúa Bạch Tuyết có làn da trắng.
@@ -570,7 +570,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 568,根本,gēnběn,"Danh từ, Tính từ, Phó từ",CĂN BẢN,"(n): căn bản, gốc rễ, cốt lõi; (adj): chính, chủ yếu, quan trọng; (adv): căn bản, trước giờ; hoàn toàn, triệt để",fundamental,根本,TRUE,这个问题根本是环境问题，我们应该根据周围环境的条件来解决。,"Về bản chất, đây là một vấn đề môi trường, và chúng ta nên giải quyết nó dựa trên điều kiện của môi trường xung quanh."
 569,夫妻,fūqī,Danh từ,PHU THÊ,"phu thê, vợ chồng",couple,夫妻,TRUE,他们的关系是夫妻，不是同事。,"Mối quan hệ của họ là vợ chồng, chứ không phải đồng nghiệp."
 570,注重,zhùzhòng,Động từ,CHÚ TRỌNG,"chú trọng, coi trọng",Pay attention to,注重,TRUE,对注重商品质量的顾客来说，价格没什么问题，最重要的是质量。,"Đối với những khách hàng coi trọng chất lượng sản phẩm, giá cả không phải là vấn đề; điều quan trọng nhất là chất lượng."
-571,品尝,pǐncháng,Động từ,PHẨM THƯỜNG,"nếm thử, thưởng thức",taste,品尝,TRUE,我喜欢来日本旅行以为我可以品尝很多特色的菜。,Tôi thích đi du lịch Nhật Bản vì ở đó tôi có thể thử nhiều món ăn độc đáo.
+571,品尝,pǐncháng,Động từ,PHẨM THƯỜNG,"nếm thử, thưởng thức",taste,品尝,TRUE,我喜欢来日本旅行以为我可以品尝很多特色的菜。,Tôi thích đi du lịch Nhật Bản vì ở đó tôi có thể thưởng thức nhiều món ăn độc đáo.
 572,方式,fāngshì,Danh từ,PHƯƠNG THỨC,"phương thức, cách thức, kiểu, cách",Way,方式,TRUE,这个作家写的方式真的吸引我。,Cách viết của tác giả này thực sự cuốn hút tôi.
 573,年底,niándǐ,Danh từ,NIÊN ĐỂ,"cuối năm, những ngày cuối năm",End of year,年底,TRUE,公司年底有很多事，我们要努力完成才能休息。,"Cuối năm có rất nhiều việc cần làm, và chúng ta cần phải nỗ lực hết sức để hoàn thành mọi việc trước khi có thể nghỉ ngơi."
 574,月底,yuèdǐ,Danh từ,NGUYỆT ĐỂ,cuối tháng,End of month,月底,TRUE,现在我最希望来的东西就是月底，主要是因为我可以收到工资。,"Hiện tại, điều tôi mong chờ nhất là cuối tháng, chủ yếu là vì tôi sẽ nhận được lương."
@@ -594,7 +594,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 592,三人行，必有我师,sānrénxíng ， bìyǒuwǒshī,Thành ngữ,"TAM NHÂN HÀNH, TẤT HỮU NGÃ SƯ","Trong ba người cùng đi, chắc chắn sẽ có người là thầy tôi (khuyến khích tinh thần cầu thị và khiêm tốn trong việc học hỏi từ người khác, cho thấy không ai hoàn hảo và mọi người đều có giá trị đáng để ta học hỏi)",Three people go together there must be my teacher,三人行，必有我师,TRUE,三人行，必有我师。,"Ba người cùng đi, chắc chắn có người là thầy tôi."
 593,如何,rúhé,Đại từ,NHƯ HÀ,"thế nào, ra sao, như thế nào",how,如何,TRUE,无论如何，我都不会离开你。,"Dù thế nào đi nữa, tôi sẽ không bao giờ rời bỏ bạn."
 594,是否,shìfǒu,Phó từ,THỊ PHỦ,"hay không, phải chăng, có không, liệu có （是否+V）",whether,是否,TRUE,无论她是否爱我，我都祝福她，希望她总是幸福。,"Dù cô ấy có yêu tôi hay không, tôi vẫn chúc cô ấy mọi điều tốt đẹp nhất và hy vọng cô ấy luôn hạnh phúc."
-595,因果,yīnguǒ,Danh từ,NHÂN QUẢ,nhân quả,cause and effect,因果,TRUE,或许我们就不该有段因果。,Có lẽ lẽ ra chúng ta không nên có mối quan hệ nhân quả này.
+595,因果,yīnguǒ,Danh từ,NHÂN QUẢ,nhân quả,cause and effect,因果,TRUE,或许我们就不该有段因果。,Có lẽ chúng ta không nên có mối quan hệ nhân quả này.
 596,原来如此,yuánláirúcǐ,Cụm từ,NGUYÊN LAI NHƯ THỬ,"hóa ra là như vậy, thì ra là vậy",I see,原来如此,TRUE,原来如此。我终于明白了。,Thì ra là vậy. Cuối cùng tôi cũng hiểu rồi.
 597,原来是这样,yuánlái shì zhèyàng,Cụm từ,NGUYÊN LAI THỊ GIÁ DẠNG,"hóa ra là như vậy, thì ra là vậy",So that's how it is.,原来是这样,TRUE,原来是这样。如果没有你的解释，我就会误会他了。,Hóa ra là vậy. Nếu không có lời giải thích của bạn thì tôi đã hiểu lầm anh ta rồi.
 598,按照时间安排,ànzhào shíjiān ānpái,Cụm từ,ÁN CHIẾU THÌ GIAN AN BÀI,theo lịch trình (theo thời gian đã sắp xếp),According to the schedule,按照时间安排,TRUE,按照时间安排，王经理今天下午两点半得参加一个会议。,"Theo lịch trình, quản lý Wang phải tham dự một cuộc họp lúc 2 giờ 30 chiều nay."
@@ -649,7 +649,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 647,食品,shípǐn,Danh từ,THỰC PHẨM,"thực phẩm, đồ ăn",food,食品,TRUE,这就是绿色食品，质量很好，也很干净，所以价格有点儿贵。,"Đây là thực phẩm hữu cơ; chất lượng rất tốt và rất sạch, vì vậy giá hơi cao."
 648,许,xǔ,Phó từ,HỨA,"có lẽ, có thể",May,许,TRUE,今天许下大雨。,Dự báo hôm nay trời sẽ mưa rất to.
 649,或许,huòxǔ,Phó từ,HOẶC HỨA,"có lẽ, có thể, hay là",perhaps,或许,TRUE,或许我们就不该认识了。,Có lẽ chúng ta không nên gặp nhau.
-650,小朋友,xiǎopéngyǒu,Danh từ,TIỂU BẰNG HỮU,"trẻ em, bạn nhỏ",kid,小朋友,TRUE,小朋友很喜欢吃巧克力，因为他们喜欢吃甜的。,Trẻ em thích sô cô la vì chúng thích đồ ngọt.
+650,小朋友,xiǎopéngyǒu,Danh từ,TIỂU BẰNG HỮU,"trẻ em, bạn nhỏ",kid,小朋友,TRUE,小朋友很喜欢吃巧克力，因为他们喜欢吃甜的。,Trẻ em thích ăn sô cô la vì chúng thích đồ ngọt.
 651,教授,jiàoshòu,Danh từ,GIÁO THỤ,giáo sư,professor,教授,TRUE,这位教授很有名，也很了不起。,Vị giáo sư này rất nổi tiếng và xuất sắc.
 652,小票,xiǎopiào,Danh từ,TIỂU PHIẾU,"hóa đơn, biên lai, phiếu thanh toán",Receipt,小票,TRUE,顾客朋友们，请留下你们的小票。在你们想换商品的情况下，小票很重要，否则，我们不能为您服务。,"Kính gửi quý khách hàng, vui lòng giữ lại hóa đơn. Hóa đơn rất cần thiết nếu quý khách muốn đổi trả hàng; nếu không, chúng tôi không thể phục vụ quý khách."
 653,特点,tèdiǎn,Danh từ,ĐẶC ĐIỂM,đặc điểm,Features,特点,TRUE,教育学生时，要根据每个学生的特点来选择不同的方法。,"Trong quá trình giáo dục học sinh, cần lựa chọn các phương pháp khác nhau tùy thuộc vào đặc điểm của từng học sinh."
@@ -826,8 +826,8 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 824,重量,zhòngliàng,Danh từ,TRỌNG LƯỢNG,trọng lượng,weight,重量,TRUE,这个箱子的重量比那个箱子重一倍。,Trọng lượng của chiếc hộp này nặng gấp đôi chiếc hộp kia.
 825,语言,yǔyán,Danh từ,NGỮ NGÔN,ngôn ngữ,language,语言,TRUE,学习一种新语言需要时间、坚持和努力，一两天内不能看见结果。,"Học một ngôn ngữ mới cần thời gian, sự kiên trì và nỗ lực; kết quả không thể thấy chỉ trong một hoặc hai ngày."
 826,节假日,jiéjiàrì,Danh từ,TIẾT GIÁ NHẬT,"ngày lễ, ngày nghỉ",Holidays,节假日,TRUE,周末商场里的人特别多，尤其是节假日，每家商店门口都排着很长的队。,"Trung tâm thương mại rất đông đúc vào cuối tuần, đặc biệt là các ngày lễ, với những hàng dài người xếp hàng trước mỗi cửa hàng."
-827,款式,kuǎnshi,Danh từ,KHOẢN THỨC,"kiểu dáng, mẫu mã; kiểu mẫu, kiểu = 样子",shape,款式,TRUE,我们的沙发款式很多，质量非常好，尤其是这一款，样子漂亮，作者也很舒服。,"Chúng tôi có nhiều kiểu ghế sofa, và chất lượng thì tuyệt vời. Chiếc sofa này đặc biệt đẹp và rất thoải mái đối với người sử dụng."
-828,不错,bùcuò,Tính từ,BẤT THÁC,"đúng vậy, phải; không tồi, tốt",good,不错,TRUE,这件衣服看起来很不错，值得看看啊。,Bộ trang phục này trông rất đẹp; đáng để xem qua.
+827,款式,kuǎnshi,Danh từ,KHOẢN THỨC,"kiểu dáng, mẫu mã; kiểu mẫu, kiểu = 样子",shape,款式,TRUE,我们的沙发款式很多，质量非常好，尤其是这一款，样子漂亮，作者也很舒服。,"Chúng tôi có nhiều kiểu ghế sofa khác nhau, và chất lượng thì tuyệt vời. Chiếc sofa này đặc biệt đẹp và rất thoải mái đối với người sử dụng."
+828,不错,bùcuò,Tính từ,BẤT THÁC,"đúng vậy, phải; không tồi, tốt",good,不错,TRUE,这件衣服看起来很不错，值得看看啊。,Bộ trang phục này trông rất đẹp; đáng để bạn xem qua.
 829,没错,méicuò,Động từ,MỘT THÁC,"đúng, chính xác, đúng vậy, chuẩn luôn",That's right,没错,TRUE,没错，我是越南人。,"Vâng, tôi là người Việt Nam."
 830,绿色食品,lǜsèshípǐn,Danh từ,LỤC SẮC THỰC PHẨM,thực phẩm xanh,Green food,绿色食品,TRUE,绿色食品很安全因为它们被检查得很仔细，所以价格有点儿贵。,"Các loại thực phẩm xanh an toàn vì chúng được kiểm tra kỹ lưỡng, do đó giá thành của chúng hơi cao hơn."
 831,无论如何,wúlùnrúhé,Cụm từ,VÔ LUẬN NHƯ HÀ,"bất luận thế nào, bất kể ra sao",anyway,无论如何,TRUE,无论如何，我要完成这个任务。,Tôi sẽ hoàn thành nhiệm vụ này bằng mọi giá.
@@ -857,9 +857,9 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 855,范围,fànwéi,"Danh từ, Động từ",PHẠM VI,"phạm vi; hạn chế, giới hạn, kiểm soát",scope,范围,TRUE,你刚说的话走出我们今天讨论的范围。,Những gì bạn vừa nói nằm ngoài phạm vi cuộc thảo luận của chúng ta hôm nay.
 856,精彩,jīngcǎi,Tính từ,TINH THẢI,"đặc sắc, tuyệt vời, xuất sắc, ngoạn mục (dùng để tán dương)",Wonderful,精彩,TRUE,今晚的电影非常精彩。,Bộ phim tối nay thật tuyệt vời.
 857,方案,fāngàn,Danh từ,PHƯƠNG ÁN,"phương án, kế hoạch",plan,方案,TRUE,您可以考虑以下这个方案吗？,Bạn có thể cân nhắc một chút về phương án này không?
-858,学者,xuézhě,Danh từ,HỌC GIẢ,học giả,scholar,学者,TRUE,这位学者很优秀，代表我们大学出国外参加国际比赛。,Học sinh này xuất sắc và đã đại diện cho trường đại học của chúng ta tham gia các cuộc thi quốc tế ở nước ngoài.
+858,学者,xuézhě,Danh từ,HỌC GIẢ,học giả,scholar,学者,TRUE,这位学者很优秀，代表我们大学出国外参加国际比赛。,Học sinh này rất xuất sắc và đã đại diện cho trường đại học của chúng ta tham gia các cuộc thi quốc tế ở nước ngoài.
 859,激动,jīdòng,Tính từ,KÍCH ĐỘNG,"cảm động, xúc động, phấn kích",Excited,激动,TRUE,他听这个消息后觉得很激动。,Anh ấy rất vui mừng khi nghe tin này.
-860,科学,kēxué,"Danh từ, Tính từ",KHOA HỌC,khoa học (科学研究证明: nghiên cứu khoa học chứng minh rằng...),science,科学,TRUE,科学研究证明，人的心情可以被周围环境影响。比如，下雨时往往让人们觉得又安静又舒服。而，天热的时候，人们很容易地发脾气。,"Nghiên cứu khoa học đã chứng minh rằng tâm trạng của con người có thể bị ảnh hưởng bởi môi trường xung quanh. Ví dụ, mưa thường khiến người ta cảm thấy bình yên và thoải mái. Ngược lại, người ta dễ nổi nóng hơn khi trời nóng."
+860,科学,kēxué,"Danh từ, Tính từ",KHOA HỌC,khoa học (科学研究证明: nghiên cứu khoa học chứng minh rằng...),science,科学,TRUE,科学研究证明，人的心情可以被周围环境影响。比如，下雨时往往让人们觉得又安静又舒服。而，天热的时候，人们很容易地发脾气。,"Nghiên cứu khoa học đã chứng minh rằng tâm trạng của con người có thể bị ảnh hưởng bởi môi trường xung quanh. Ví dụ, mưa thường khiến người ta cảm thấy bình yên và thoải mái. Ngược lại, người ta dễ cáu gắt hơn khi trời nóng."
 861,心烦,xīnfán,Tính từ,TÂM PHIỀN,"phiền lòng, buồn phiền; bực mình, buồn bực",Frustrated,心烦,TRUE,有很多事情让我心烦，我不知道现在该干什么。,"Có nhiều chuyện đang làm tôi phiền lòng, và tôi không biết phải làm gì lúc này."
 862,高度,gāodù,"Danh từ, Tính từ",CAO ĐỘ,"độ cao, tầm cao; rất cao, mức độ cao",high,高度,TRUE,这座山的高度是两千米以上。,Ngọn núi này cao hơn hai nghìn mét.
 863,墙,qiáng,Danh từ,TƯỜNG,"tường, bức tường",wall,墙,TRUE,我把这个图片挂在墙上。,Tôi đã treo bức tranh này lên tường.
@@ -988,7 +988,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 986,很久很久以前,hěnjiǔhěnjiǔ yǐqián,Cụm từ,NGẬN CỬU NGẬN CỬU DĨ TIỀN,"Rất lâu trước đây, Ngày xưa (Bắt đầu 1 câu chuyện)","A long, long time ago",很久很久以前,TRUE,,#VALUE!
 987,好奇,hàoqí,Tính từ,HIẾU KỲ,"hiếu kỳ, tò mò",curious,好奇,TRUE,,#VALUE!
 988,宿舍,sùshè,Danh từ,TÚC XÁ,ký túc xá,dormitory,宿舍,TRUE,,#VALUE!
-989,离不开,líbukāi,Động từ,LI BẤT KHAI,không thể tách rời khỏi cái gì đó,Cannot live without,离不开,TRUE,社会的发展离不开每个人的努力。,Sự phát triển của xã hội không thể tách rời khỏi nỗ lực của mỗi người.
+989,离不开,#ERROR!,Động từ,LI BẤT KHAI,không thể tách rời khỏi cái gì đó,Cannot live without,离不开,TRUE,社会的发展离不开每个人的努力。,Sự phát triển của xã hội không thể tách rời khỏi nỗ lực của mỗi người.
 990,强,qiáng,Tính từ,CƯỜNG,"mạnh, mạnh mẽ; cao, tốt",powerful,强,TRUE,他不仅能力强，而且脾气好，毕业后一定找到一份好的工作。,Anh ấy không chỉ có năng lực mà còn có tính khí tốt; chắc chắn anh ấy sẽ tìm được một công việc tốt sau khi tốt nghiệp.
 991,师傅,shīfu,Danh từ,SƯ PHÓ,"sư phụ (gọi kính trọng dành cho những người có tay nghề); bác tài, tài xế = 司机",master,师傅,TRUE,师傅，我要去美国大使馆，半个小时后能到吗？,"Bác tài ơi, tôi cần đi đến Đại sứ quán Mỹ, nửa tiếng nữa có thể tới nơi không?"
 992,生命,shēngmìng,Danh từ,SINH MỆNH,"sinh mệnh, sự sống, tính mạng, sinh mạng, mạng sống",life,生命,TRUE,,#VALUE!
@@ -1059,7 +1059,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 1057,体育馆,tǐyùguǎn,Danh từ,THỂ DỤC QUÁN,nhà thi đấu (thể thao),stadium,体育馆,TRUE,,#VALUE!
 1058,有关,yǒuguān,Động từ,HỮU QUAN,có liên quan,related,有关,TRUE,,#VALUE!
 1059,做客,zuòkè,Động từ,TỐ KHÁCH,"làm khách, tới nhà chơi",Visiting,做客,TRUE,,#VALUE!
-1060,优质,yōuzhì,Tính từ,ƯU CHẤT,"chất lượng cao, chất lượng tốt",high quality,优质,TRUE,无论在哪个方面，我们都可以为顾客们提供最优质的服务。,"Trên mọi phương diện, chúng tôi có thể cung cấp cho khách hàng dịch vụ chất lượng cao nhất."
+1060,优质,yōuzhì,Tính từ,ƯU CHẤT,"chất lượng cao, chất lượng tốt",high quality,优质,TRUE,无论在哪个方面，我们都可以为顾客们提供最优质的服务。,"Trên mọi phương diện, chúng tôi đều có thể cung cấp cho khách hàng dịch vụ chất lượng cao nhất."
 1061,种种,zhǒngzhǒng,Tính từ,CHỦNG CHỦNG,"đủ loại, các loại, đủ thứ",Various,种种,TRUE,,#VALUE!
 1062,需要,xūyào,"Danh từ, Động từ",NHU YẾU,"(n): yêu cầu, nhu cầu, sự đòi hỏi; (v): cần, cần phải",need,需要,TRUE,,#VALUE!
 1063,谈生意,tán shēngyi,Động từ,ĐÀM SINH Ý,"bàn chuyện làm ăn, bàn chuyện kinh doanh",Discussing business,谈生意,TRUE,,#VALUE!
@@ -1237,7 +1237,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 1235,学位,xuéwèi,Danh từ,HỌC VỊ,học vị,Bachelor of Science,,FALSE,,#VALUE!
 1236,论文,lùnwén,Danh từ,LUẬN VĂN,luận văn,paper,,FALSE,,#VALUE!
 1237,项目,xiàngmù,Danh từ,HẠNG MỤC,"hạng mục, dự án",project,,FALSE,我负责这个项目的全部工作。,Tôi chịu trách nhiệm toàn bộ công việc trong dự án này.
-1238,不断,bùduàn,"Phó từ, Động từ",BẤT ĐOẠN,"không ngừng, liên tục; không ngớt, liên tục, liên tiếp",continuously,,FALSE,随着经济的发展，人民的生活水平不断提高。,"Cùng với sự phát triển kinh tế, mức sống của người dân không ngừng được cải thiện."
+1238,不断,bùduàn,"Phó từ, Động từ",BẤT ĐOẠN,"không ngừng, liên tục; không ngớt, liên tục, liên tiếp",Continuous,,FALSE,随着经济的发展，人民的生活水平不断提高。,"Cùng với sự phát triển kinh tế, mức sống của người dân không ngừng được cải thiện."
 1239,远大,yuǎndà,Tính từ,VIỄN ĐẠI,"cao cả, lớn lao, to lớn",Yuanda,,FALSE,"他从小就有一个远大的理想, 那就是成为一位著名的作家。","Ngay từ nhỏ, ông đã ấp ủ một hoài bão lớn: trở thành một nhà văn nổi tiếng."
 1240,伟大,wěidà,Tính từ,VĨ ĐẠI,"vĩ đại (người, lý tưởng, sự nghiệp, đóng góp...)",great,,FALSE,为了社会的发展和文明而愿意地贡献是一个伟大的理想。,Sẵn sàng đóng góp vào sự phát triển xã hội và văn minh là một lý tưởng cao cả.
 1241,广大,guǎngdà,Tính từ,QUẢNG ĐẠI,"to lớn, rộng lớn (phạm vi, quy mô, không gian...)",vast,,FALSE,这个国家的领土非常广大。,Quốc gia này có lãnh thổ rất rộng lớn.
@@ -1720,7 +1720,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 1718,打交道,dǎjiāodào,Động từ,ĐẢ GIAO ĐẠO,"giao tiếp, giao thiệp, tiếp xúc, qua lại",Dealing with,,FALSE,,
 1719,现象,xiànxiàng,Danh từ,HIỆN TƯỢNG,hiện tượng,Phenomenon,,FALSE,,
 1720,居民,jūmín,Danh từ,CƯ DÂN,cư dân,resident,,FALSE,,
-1721,善事,shànshì,Danh từ,THIỆN SỰ,"việc thiện, điều thiện",good deeds,,FALSE,,
+1721,善事,shànshì,Danh từ,THIỆN SỰ,"việc thiện, điều thiện",Good deeds,,FALSE,,
 1722,慈善,císhàn,Tính từ,TỪ THIỆN,từ thiện,charitable,,FALSE,,
 1723,慈善家,císhànjiā,Danh từ,TỪ THIỆN GIA,nhà từ thiện,philanthropist,,FALSE,,
 1724,感恩,gǎnēn,Động từ,CẢM ÂN,biết ơn,grateful,,FALSE,,
@@ -1729,7 +1729,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 1727,小气,xiǎoqì,Tính từ, TIỂU KHÍ,"keo kiệt, bủn xỉn, ki bo; hẹp hòi, nhỏ mọn",mean,,FALSE,,
 1728,立刻,lìkè,Phó từ,LẬP KHẮC,"lập tức, ngay lập tức, tức khắc",immediately,,FALSE,,
 1729,告别,gàobié,Động từ,CÁO BIỆT,"tạm biệt, cáo từ, nói lời tạm biệt",bid farewell,,FALSE,,
-1730,恋人,liànrén,Danh từ,LUYẾN NHÂN,"người yêu, tình nhân",lovers,,FALSE,,
+1730,恋人,liànrén,Danh từ,LUYẾN NHÂN,"người yêu, tình nhân",lover,,FALSE,,
 1731,不然,bùrán,Liên từ,BẤT NHIÊN,"nếu không, không thì",otherwise,,FALSE,,
 1732,操场,cāochǎng,Danh từ,THAO TRƯỜNG,"thao trường, bãi tập, sân tập",playground,,FALSE,,
 1733,医务室,yīwùshì,Danh từ,Y VỤ THẤT,phòng y tế,Medical Room,,FALSE,,
@@ -1954,7 +1954,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 1952,连续,liánxù,Động từ,LIÊN TỤC,"liên tục, liên tiếp",continuous,,FALSE,,
 1953,被评为,bèi píngwéi,Động từ,BỊ BÌNH VI,"được bầu chọn, được chọn là",Rated as,,FALSE,,
 1954,陆地,lùdì,Danh từ,LỤC ĐỊA,"lục địa, đất liền",land,,FALSE,,
-1955,适应能力,shìyìngnénglì,Danh từ,THÍCH ỨNG NĂNG LỰC,"khả năng thích nghi, năng lực thích ứng",adaptability,,FALSE,,
+1955,适应能力,shìyìngnénglì,Danh từ,THÍCH ỨNG NĂNG LỰC,"khả năng thích nghi, năng lực thích ứng",Adaptability,,FALSE,,
 1956,分布,fēnbù,Động từ,PHÂN BỐ,phân bố,distributed,,FALSE,,
 1957,广泛,guǎngfàn,Tính từ,QUẢNG PHIẾM,"phổ biến, rộng rãi, rộng khắp, rộng lớn",widely,,FALSE,,
 1958,缺乏,quēfá,Động từ,KHUYẾT PHẠP,"thiếu hụt, khan hiếm, thiếu, không đủ",lack,,FALSE,,
@@ -2147,7 +2147,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 2145,求婚,qiúhūn,Động từ,CẦU HÔN,cầu hôn,Proposal,,FALSE,,
 2146,相爱,xiāngài,Động từ,TƯƠNG ÁI,yêu nhau,Love,,FALSE,,
 2147,携手,xiéshǒu,Động từ,HUỀ THỦ,"cùng nhau, nắm tay nhau, chung tay, bắt tay, hợp tác",Join hands,,FALSE,,
-2148,走过,zǒuguò,Động từ,TẨU QUÁ,"vượt qua, đi qua, bước qua, trôi qua",Walked,,FALSE,,
+2148,走过,zǒuguò,Động từ,TẨU QUÁ,"vượt qua, đi qua, bước qua, trôi qua",Walked past,,FALSE,,
 2149,风雨,fēngyǔ,Danh từ,PHONG VŨ,"gian khổ, khó khăn, sóng gió; mưa gió",wind and rain,,FALSE,,
 2150,余生,yúshēng,Danh từ,DƯ SINH,quãng đời còn lại,The rest of my life,,FALSE,,
 2151,男主角,nánzhǔjué,Danh từ,NAM CHỦ GIÁC,nam chính,male lead,,FALSE,,
@@ -2284,7 +2284,7 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 2282,点名,diǎnmíng,,,Điểm danh,Roll call,,FALSE,,
 2283,点头,diǎntóu,,,gật đầu,nod,,FALSE,,
 2284,低价,dījià,,,giá thấp,low price,,FALSE,,
-2285,低温,dīwēn,,,Nhiệt độ thấp,Low temperature,,FALSE,,
+2285,低温,dīwēn,,,nhiệt độ thấp,low temperature,,FALSE,,
 2286,底下,dǐxià,,,dưới,under,,FALSE,,
 2287,低于,dīyú,,,Dưới,Below,,FALSE,,
 2288,队员,duìyuán,,,Thành viên nhóm,Team members,,FALSE,,
@@ -2630,376 +2630,23 @@ STT,HÁN TỰ,PINYIN,TỪ LOẠI,HÁN VIỆT,NGHĨA TIẾNG VIỆT,NGHĨA TIẾN
 2628,和睦,hémù,Tính từ,HÒA MỤC,"hòa hợp, hòa thuận, đầm ấm",harmony,,FALSE,,
 2629,安稳,ānwěn,Tính từ,AN ỔN,"vững chắc, chắc chắn, yên ổn",Stable,,FALSE,,
 2630,相似,xiāngsì,Tính từ,TƯƠNG TỰ,"tương tự, same same, na ná, giống nhau",resemblance,,FALSE,,
-2631,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
-,,,,,,#VALUE!,,TRUE,,
+2631,原创,yuánchuàng,Danh từ,NGUYÊN SÁNG,"nguyên bản, nguyên tác, tác phẩm gốc",Original,,FALSE,,
+2632,通勤,tōngqín,Động từ,THÔNG CẦN,"(di chuyển): đi học, đi làm, đi lại (bằng phương tiện nào đó)",commuting,,FALSE,,
+2633,策略,cèlüè,"Danh từ, Tính từ",SÁCH LƯỢC,"(n) chiến lược, chiến thuật, sách lược; (adj): khéo léo",Strategy,,FALSE,,
+2634,耀眼,yàoyǎn,Tính từ,DIỆU NHÃN,"rực rỡ, chói chang, sáng chói, nổi bật, bắt mắt",dazzling,,FALSE,,
+2635,,,,,,#VALUE!,,TRUE,,
+2636,,,,,,#VALUE!,,TRUE,,
+2637,,,,,,#VALUE!,,TRUE,,
+2638,,,,,,#VALUE!,,TRUE,,
+2639,,,,,,#VALUE!,,TRUE,,
+2640,,,,,,#VALUE!,,TRUE,,
+2641,,,,,,#VALUE!,,TRUE,,
+2642,,,,,,#VALUE!,,TRUE,,
+2643,,,,,,#VALUE!,,TRUE,,
+2644,,,,,,#VALUE!,,TRUE,,
+2645,,,,,,#VALUE!,,TRUE,,
+2646,,,,,,#VALUE!,,TRUE,,
+2647,,,,,,#VALUE!,,TRUE,,
+2648,,,,,,#VALUE!,,TRUE,,
+2649,,,,,,#VALUE!,,TRUE,,
+2650,,,,,,#VALUE!,,TRUE,,

@@ -117,6 +117,20 @@
                 </section>
 
                 <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900 mb-1">Chế độ Thử thách</h2>
+                            <p class="text-sm text-slate-500">Điền chữ Hán theo nghĩa tiếng Việt. Sử dụng cùng các mốc
+                                10, 20, 50, 100.</p>
+                        </div>
+                        <span
+                            class="inline-flex rounded-full bg-blue-50 text-blue-700 px-3 py-1 text-xs font-semibold">Mới</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-4">Chọn cấp độ HSK bên dưới và nhấn nút <strong>Thử
+                            thách</strong> để bắt đầu.</p>
+                </section>
+
+                <section class="glass rounded-3xl border border-slate-200/80 p-6 md:p-8 shadow-sm">
                     <h2 class="text-lg font-bold text-slate-900 mb-1">Kỷ lục cá nhân — {{ modeLabel }}</h2>
                     <p class="text-sm text-slate-500 mt-1">Hiển thị kỷ lục tốt nhất cho mỗi số từ trong phiên, theo từng
                         cấp HSK.</p>
@@ -166,7 +180,7 @@
                 <section>
                     <h2 class="text-lg font-bold text-slate-900 mb-4">Chọn cấp độ HSK</h2>
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        <button v-for="lvl in [1,2,3,4]" :key="lvl" type="button" @click="startLevel(lvl)"
+                        <div v-for="lvl in [1,2,3,4]" :key="lvl"
                             class="card-hover group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 text-left shadow-sm hover:border-blue-300">
                             <div
                                 class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-50 opacity-80 group-hover:bg-blue-100 transition-colors">
@@ -178,8 +192,16 @@
                                         từ</span><i
                                         class="fa-solid fa-arrow-right ml-auto text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                                 </div>
+                                <div class="mt-6 flex flex-wrap gap-2">
+                                    <button type="button" @click.stop="startLevel(lvl)"
+                                        class="flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100">Trắc
+                                        nghiệm</button>
+                                    <button type="button" @click.stop="startChallenge(lvl)"
+                                        class="flex-1 rounded-2xl border border-blue-500 bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-100">Thử
+                                        thách</button>
+                                </div>
                             </div>
-                        </button>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -349,6 +371,70 @@
                                 class="px-8 py-3.5 rounded-2xl bg-blue-600 text-white font-bold shadow-lg hover:bg-blue-700 transition-colors sm:ml-auto">{{
                                 quizIndex < quizQueue.length - 1 ? 'Câu tiếp' : 'Hoàn thành' }}<i
                                     class="fa-solid fa-arrow-right ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <main v-else-if="currentView === 'challenge'" class="fade-in">
+                <div class="glass rounded-3xl border border-slate-200/80 shadow-lg overflow-hidden">
+                    <div
+                        class="flex items-center justify-between gap-3 px-4 py-4 md:px-8 border-b border-slate-100 bg-white/50">
+                        <button type="button" @click="exitQuiz"
+                            class="text-slate-500 hover:text-slate-800 text-sm font-medium"><i
+                                class="fa-solid fa-arrow-left mr-2"></i>Thoát</button>
+                        <div class="text-center flex-1 min-w-0">
+                            <div class="text-[10px] font-bold uppercase tracking-widest text-blue-600">HSK {{
+                                currentLevel }} · Thử thách</div>
+                            <div class="text-sm text-slate-500 truncate">Phiên {{ quizQueue.length }} từ · Câu {{
+                                quizIndex + 1 }} / {{ quizQueue.length }}</div>
+                            <div class="text-xs text-slate-400 mt-1 flex items-center justify-center gap-4">
+                                <div class="flex items-center gap-2"><i class="fa-regular fa-clock"></i>
+                                    <span class="font-medium">{{ formatTime(timerSeconds) }}</span>
+                                </div>
+                                <div v-if="getBestRecord('challenge', quizQueue.length, currentLevel)"
+                                    class="flex items-center gap-2">
+                                    <i class="fa-solid fa-trophy text-amber-500"></i>
+                                    <span class="text-xs">Kỷ lục: {{ getBestRecord('challenge', quizQueue.length,
+                                        currentLevel).correct }}/{{ quizQueue.length }} · {{
+                                        formatTime(getBestRecord('challenge', quizQueue.length, currentLevel).time)
+                                        }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-10"></div>
+                    </div>
+                    <div class="h-1.5 bg-slate-100">
+                        <div class="progress-shine h-full rounded-r transition-all duration-500 ease-out"
+                            :style="{ width: ((quizIndex + 1) / Math.max(quizQueue.length, 1)) * 100 + '%' }"></div>
+                    </div>
+                    <div class="p-6 md:p-10">
+                        <div class="text-center mb-10">
+                            <p class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug max-w-xl mx-auto">
+                                {{ currentQuestion.meaning }}</p>
+                            <p class="text-sm text-slate-400 mt-3">Điền chữ Hán tương ứng với nghĩa tiếng Việt.</p>
+                        </div>
+                        <form @submit.prevent="submitChallenge" class="space-y-4">
+                            <input v-model="challengeAnswer" type="text" autocomplete="off"
+                                class="w-full rounded-3xl border border-slate-200 bg-white px-5 py-4 text-xl font-medium text-slate-900 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                                placeholder="Nhập chữ Hán ở đây..." />
+                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+                                <button type="submit" :disabled="challengeAnswered || !challengeAnswer.trim()"
+                                    class="min-w-[10rem] rounded-2xl bg-blue-600 text-white px-6 py-3 font-semibold shadow-lg hover:bg-blue-700 disabled:opacity-50">Nộp</button>
+                                <div class="text-sm text-slate-600 mt-2 sm:mt-0">
+                                    <p v-if="challengeAnswered && challengeWasCorrect"
+                                        class="text-emerald-600 font-medium"><i class="fa-solid fa-check mr-2"></i>Chính
+                                        xác!</p>
+                                    <p v-else-if="challengeAnswered" class="text-rose-600 font-medium"><i
+                                            class="fa-solid fa-xmark mr-2"></i>Sai. Đáp án đúng: <span
+                                            class="cn-font font-semibold">{{ currentQuestion.word }}</span></p>
+                                </div>
+                            </div>
+                        </form>
+                        <div v-if="challengeAnswered" class="mt-6 flex justify-end">
+                            <button type="button" @click="nextQuestion"
+                                class="rounded-2xl bg-slate-100 text-slate-700 px-6 py-3 font-semibold hover:bg-slate-200">{{
+                                quizIndex < quizQueue.length - 1 ? 'Câu tiếp' : 'Hoàn thành' }}</button>
                         </div>
                     </div>
                 </div>

@@ -49,6 +49,10 @@ createApp({
         const dictionary = ref([]);
         const currentView = ref('dashboard');
         const quizMode = ref('cn-vi');
+        const challengeAnswer = ref('');
+        const challengeAnswered = ref(false);
+        const challengeWasCorrect = ref(false);
+        const CHALLENGE_MODE = 'challenge';
 
         const collections = ref(normalizeCollections(JSON.parse(localStorage.getItem(NB_KEY) || 'null')));
 
@@ -235,6 +239,27 @@ createApp({
             }
         };
 
+        const startChallenge = (lvl) => {
+            const words = wordsByLevel.value[lvl] || [];
+            if (!words.length) {
+                showToast('Không đủ từ cho chế độ Thử thách này.');
+                return;
+            }
+            const target = Math.min(sessionWordCount.value, words.length);
+            currentLevel.value = lvl;
+            quizQueue.value = [...words].sort(() => Math.random() - 0.5).slice(0, target);
+            quizIndex.value = 0;
+            sessionCorrectCount.value = 0;
+            challengeAnswer.value = '';
+            challengeAnswered.value = false;
+            challengeWasCorrect.value = false;
+            startTimer();
+            showView('challenge');
+            if (target < sessionWordCount.value) {
+                showToast(`Cấp HSK ${lvl} hiện có ${words.length} từ — đã chọn ${target} từ cho phiên này.`);
+            }
+        };
+
         const generateOptions = () => {
             const correct = currentQuestion.value;
             const pool = dictionary.value.filter((d) => d.level === currentLevel.value && d.word !== correct.word);
@@ -283,6 +308,27 @@ createApp({
             else {playEffect('wrong'); addToCollection(currentQuestion.value, true);}
         };
 
+        const submitChallenge = () => {
+            if (challengeAnswered.value) return;
+            const answer = String(challengeAnswer.value || '').trim().replace(/\s+/g, '');
+            if (!answer) {
+                showToast('Nhập chữ Hán tương ứng trước khi nộp.');
+                return;
+            }
+            challengeAnswered.value = true;
+            const expected = String(currentQuestion.value.word || '').trim();
+            const ok = answer === expected;
+            challengeWasCorrect.value = ok;
+            if (ok) {
+                playEffect('right');
+                sessionCorrectCount.value += 1;
+                setTimeout(() => speak(currentQuestion.value.word), 900);
+            } else {
+                playEffect('wrong');
+                addToCollection(currentQuestion.value, true);
+            }
+        };
+
         const getOptionClass = (opt) => {
             if (!answered.value) return 'border-slate-100 bg-white hover:border-teal-200 hover:bg-teal-50/50 text-slate-800';
             if (isCorrect(opt)) return 'border-emerald-400 bg-emerald-50 text-emerald-900';
@@ -293,14 +339,21 @@ createApp({
         const nextQuestion = () => {
             if (quizIndex.value < quizQueue.value.length - 1) {
                 quizIndex.value += 1;
-                generateOptions();
+                if (currentView.value === 'quiz') {
+                    generateOptions();
+                } else if (currentView.value === 'challenge') {
+                    challengeAnswer.value = '';
+                    challengeAnswered.value = false;
+                    challengeWasCorrect.value = false;
+                }
             } else {
                 // finalize session: stop timer, save record if better, then go back to dashboard
                 stopTimer();
                 const total = quizQueue.value.length;
                 const correct = sessionCorrectCount.value;
                 const timeSec = timerSeconds.value;
-                const isNew = saveRecordIfBetter(quizMode.value, total, currentLevel.value, correct, timeSec);
+                const modeKey = currentView.value === 'challenge' ? CHALLENGE_MODE : quizMode.value;
+                const isNew = saveRecordIfBetter(modeKey, total, currentLevel.value, correct, timeSec);
                 showToast(`Hoàn thành — ${correct}/${total} · ${formatTime(timeSec)}${isNew ? ' — Kỷ lục mới!' : ''}`);
                 showView('dashboard');
             }
@@ -417,8 +470,10 @@ createApp({
             selectDictLevel,
             selectDictPage,
             startLevel,
+            startChallenge,
             startReview,
             checkAnswer,
+            submitChallenge,
             isCorrect,
             getOptionClass,
             nextQuestion,
@@ -443,6 +498,9 @@ createApp({
             recordLabel,
             getBestRecord,
             sessionCorrectCount,
+            challengeAnswer,
+            challengeAnswered,
+            challengeWasCorrect,
             timerRunning,
             records,
         };

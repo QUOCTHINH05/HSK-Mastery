@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSK Mastery — Ứng dụng ôn từ vựng HSK1–4</title>
+    <title>HSK Mastery — Ứng dụng ôn từ vựng HSK1–5</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link
@@ -143,6 +143,7 @@
                                     <th class="px-3 py-2">HSK 2</th>
                                     <th class="px-3 py-2">HSK 3</th>
                                     <th class="px-3 py-2">HSK 4</th>
+                                    <th class="px-3 py-2">HSK 5</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -152,6 +153,7 @@
                                     <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 2), n) }}</td>
                                     <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 3), n) }}</td>
                                     <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 4), n) }}</td>
+                                    <td class="px-3 py-2">{{ recordLabel(getBestRecord(quizMode, n, 5), n) }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -179,8 +181,8 @@
 
                 <section>
                     <h2 class="text-lg font-bold text-slate-900 mb-4">Chọn cấp độ HSK</h2>
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div v-for="lvl in [1,2,3,4]" :key="lvl"
+                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div v-for="lvl in [1,2,3,4,5]" :key="lvl"
                             class="card-hover group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 text-left shadow-sm hover:border-blue-300">
                             <div
                                 class="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-50 opacity-80 group-hover:bg-blue-100 transition-colors">
@@ -211,7 +213,7 @@
                     <div class="flex flex-wrap gap-2 items-center justify-between">
                         <h2 class="text-2xl font-bold text-slate-900">Từ điển HSK</h2>
                         <div class="flex flex-wrap gap-2">
-                            <button v-for="lvl in [1,2,3,4]" :key="`dict-level-${lvl}`" @click="selectDictLevel(lvl)"
+                            <button v-for="lvl in [1,2,3,4,5]" :key="`dict-level-${lvl}`" @click="selectDictLevel(lvl)"
                                 class="px-4 py-2 rounded-xl text-sm font-bold border-2 transition-all"
                                 :class="dictLevel === lvl ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-slate-200 bg-white text-slate-600'">HSK
                                 {{ lvl }} ({{ getWordCount(lvl) }})</button>

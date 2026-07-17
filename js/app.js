@@ -3,7 +3,7 @@ import { NB_KEY, quizModes, wordCountOptions, voiceOptions, VOICE_KEY } from './
 import { fetchCsv, parseRows } from './csv.js';
 import { speakChinese, stopSpeaking, playVoiceSample, refreshZhVoices, playEffect } from './speech.js';
 
-const HSK_LEVELS = [1, 2, 3, 4];
+const HSK_LEVELS = [1, 2, 3, 4, 5];
 const DICT_PAGE_SIZE = 100;
 const PINYIN_KEY = 'hsk_mastery_show_pinyin_v1';
 const savedShowPinyin = localStorage.getItem(PINYIN_KEY);
@@ -24,7 +24,7 @@ function loadRecords() {
 }
 
 function normalizeCollections(raw) {
-    const empty = { 1: [], 2: [], 3: [], 4: [] };
+    const empty = { 1: [], 2: [], 3: [], 4: [], 5: [] };
     if (!raw) return empty;
     if (Array.isArray(raw)) {
         // Backward compatible from old notebook array format
@@ -89,7 +89,7 @@ createApp({
         const selectedVoiceLabel = computed(() => voiceOptions.find((x) => x.id === selectedVoiceId.value)?.label || '');
 
         const wordsByLevel = computed(() => {
-            const map = { 1: [], 2: [], 3: [], 4: [] };
+            const map = { 1: [], 2: [], 3: [], 4: [], 5: [] };
             for (const w of dictionary.value) {
                 if (HSK_LEVELS.includes(w.level)) map[w.level].push(w);
             }
@@ -112,6 +112,7 @@ createApp({
                     { name: 'data/Từ vựng HSK1-4 - HSK1+2.csv', split: 'hsk12', level: 1 },
                     { name: 'data/Từ vựng HSK1-4 - HSK3.csv', level: 3 },
                     { name: 'data/Từ vựng HSK1-4 - HSK4.csv', level: 4 },
+                    { name: 'data/Từ vựng HSK1-4 - HSK5.csv', level: 5 },
                 ];
                 const all = [];
                 for (const f of files) {
